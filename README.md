@@ -81,6 +81,7 @@ Este proyecto implementa un agente conversacional que interactúa con los client
 │   └── .env.example              # Variables de entorno ejemplo
 │
 ├── CLAUDE.md                     # Guía para desarrollo con AI
+├── DEPLOYMENT.md                 # Guía de deployment en Vercel
 └── README.md                     # Este archivo
 ```
 
@@ -92,6 +93,8 @@ Este proyecto implementa un agente conversacional que interactúa con los client
 - Número de teléfono dedicado para WhatsApp Business
 
 ## Instalación
+
+> **Guía completa de deployment:** Para instrucciones detalladas paso a paso, consulta [DEPLOYMENT.md](DEPLOYMENT.md)
 
 ### 1. Clonar el repositorio
 
