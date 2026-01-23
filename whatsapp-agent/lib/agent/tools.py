@@ -6,6 +6,7 @@ from uuid import UUID
 from lib.db.queries import ProductQueries, OrderQueries, CustomerQueries
 from lib.services.orders import OrdersService
 from lib.schemas.order import OrderItem
+from lib.data.recipes import RecipesData
 
 
 # Tool definitions for Claude
@@ -48,17 +49,40 @@ TOOLS = [
         }
     },
     {
-        "name": "get_recipes",
-        "description": "Obtiene las recetas de un producto específico",
+        "name": "list_recipes",
+        "description": "Lista todas las recetas disponibles de la panadería",
+        "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        }
+    },
+    {
+        "name": "get_recipe",
+        "description": "Obtiene una receta específica por nombre o ID",
         "input_schema": {
             "type": "object",
             "properties": {
-                "product_id": {
+                "query": {
                     "type": "string",
-                    "description": "ID del producto"
+                    "description": "Nombre o número de la receta a buscar"
                 }
             },
-            "required": ["product_id"]
+            "required": ["query"]
+        }
+    },
+    {
+        "name": "search_recipes",
+        "description": "Busca recetas por nombre o ingrediente",
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "query": {
+                    "type": "string",
+                    "description": "Texto a buscar en recetas (nombre o ingrediente)"
+                }
+            },
+            "required": ["query"]
         }
     },
     {
@@ -202,32 +226,51 @@ class ToolExecutor:
 
         return result
 
-    def _tool_get_recipes(self, input: Dict) -> str:
-        """Get recipes for a product"""
-        product_id = input.get("product_id")
-        if not product_id:
-            return "Error: Se requiere el ID del producto"
+    def _tool_list_recipes(self, input: Dict) -> str:
+        """List all available recipes"""
+        recipes_data = RecipesData()
+        return recipes_data.format_recipe_list()
 
-        recipes = ProductQueries.get_recipes_by_product(UUID(product_id))
+    def _tool_get_recipe(self, input: Dict) -> str:
+        """Get a specific recipe by name or ID"""
+        query = input.get("query", "")
+        if not query:
+            return "Error: Se requiere el nombre o número de la receta"
 
-        if not recipes:
-            return "No hay recetas disponibles para este producto"
+        recipes_data = RecipesData()
 
-        result = f"Recetas para {recipes[0].product_name}:\n\n"
-        for r in recipes:
-            result += f"🍳 {r.name}\n"
-            result += "Ingredientes:\n"
-            for ing in r.ingredients:
-                result += f"  - {ing.get('nombre', ing)}"
-                if ing.get('cantidad'):
-                    result += f": {ing['cantidad']}"
-                result += "\n"
-            result += f"\nPreparación:\n{r.instructions}\n"
-            if r.tips:
-                result += f"\n💡 Tip: {r.tips}\n"
-            result += "\n"
+        # Try to parse as ID first
+        try:
+            recipe_id = int(query)
+            recipe = recipes_data.get_recipe_by_id(recipe_id)
+            if recipe:
+                return recipes_data.format_recipe(recipe)
+        except ValueError:
+            pass
 
-        return result
+        # Search by name
+        recipe = recipes_data.get_recipe_by_name(query)
+        if recipe:
+            return recipes_data.format_recipe(recipe)
+
+        return f"No se encontró la receta '{query}'. Usa 'list_recipes' para ver todas las recetas disponibles."
+
+    def _tool_search_recipes(self, input: Dict) -> str:
+        """Search recipes by name or ingredient"""
+        query = input.get("query", "")
+        if not query:
+            return "Error: Se requiere un texto para buscar"
+
+        recipes_data = RecipesData()
+        results = recipes_data.search_recipes(query)
+
+        if not results:
+            return f"No se encontraron recetas con '{query}'"
+
+        if len(results) == 1:
+            return recipes_data.format_recipe(results[0])
+
+        return recipes_data.format_recipe_list(results)
 
     def _tool_create_order(self, input: Dict) -> str:
         """Create a new order"""

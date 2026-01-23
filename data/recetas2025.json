@@ -1,0 +1,1027 @@
+{
+  "panaderia": "Panacea Gluten Free Bakery",
+  "tipo": "Recetas Sin Gluten",
+  "total_recetas": 44,
+  "recetas": [
+    {
+      "id": 1,
+      "nombre": "Pan de Molde",
+      "rendimiento": "48 panes",
+      "ingredientes": [
+        { "nombre": "Premezcla", "cantidad": 14000, "unidad": "grs" },
+        { "nombre": "Trigo Sarraceno", "cantidad": 1000, "unidad": "grs" },
+        { "nombre": "Azucar", "cantidad": 200, "unidad": "grs" },
+        { "nombre": "Goma Xantica", "cantidad": 160, "unidad": "grs" },
+        { "nombre": "Levadura", "cantidad": 120, "unidad": "grs" },
+        { "nombre": "Sal", "cantidad": 200, "unidad": "grs" },
+        { "nombre": "Propionato de Calcio", "cantidad": 20, "unidad": "grs" },
+        { "nombre": "Miel", "cantidad": 600, "unidad": "grs" },
+        { "nombre": "Huevos", "cantidad": 32, "unidad": "unidades" },
+        { "nombre": "Agua", "cantidad": 13000, "unidad": "ml" },
+        { "nombre": "Margadan Masa", "cantidad": 1200, "unidad": "grs" }
+      ],
+      "procedimiento": "Poner en la amasadora todos los secos y mezclar, agregar todos los liquidos juntos y batir.",
+      "coccion": {
+        "batido": "30 min aprox",
+        "peso_por_unidad": "650 grs",
+        "pintar": "con huevo",
+        "leudado": "hasta la altura del molde",
+        "temperatura_horno": 160,
+        "tiempo": "50 min",
+        "vapor": "apenas entran al horno"
+      }
+    },
+    {
+      "id": 2,
+      "nombre": "Panes Chip y Pancho",
+      "rendimiento": "48 hamburguesas, 66 panchos, 132 chip",
+      "ingredientes": [
+        { "nombre": "Premezcla", "cantidad": 3000, "unidad": "grs" },
+        { "nombre": "Maicena", "cantidad": 1050, "unidad": "grs" },
+        { "nombre": "Azucar", "cantidad": 270, "unidad": "grs" },
+        { "nombre": "Goma Xantica", "cantidad": 160, "unidad": "grs" },
+        { "nombre": "Levadura", "cantidad": 60, "unidad": "grs" },
+        { "nombre": "Sal", "cantidad": 90, "unidad": "grs" },
+        { "nombre": "Propionato Calcio", "cantidad": 15, "unidad": "grs" },
+        { "nombre": "Margarina", "cantidad": 600, "unidad": "grs" },
+        { "nombre": "Huevos", "cantidad": 18, "unidad": "unidades" },
+        { "nombre": "Pure de Papa Preparado", "cantidad": 300, "unidad": "grs" },
+        { "nombre": "Leche", "cantidad": 1300, "unidad": "ml" },
+        { "nombre": "Agua", "cantidad": 3200, "unidad": "ml" }
+      ],
+      "procedimiento": "Todo lo seco junto con la manteca, una vez arenada la manteca agregar el pure y por ultimo todos los liquidos.",
+      "coccion": {
+        "peso_hamburguesa": "140 grs",
+        "peso_viena": "100 grs",
+        "peso_chips": "50 grs",
+        "batido": "mucho batido hasta cambiar el color",
+        "pintar": "con huevo",
+        "temperatura_horno": 160,
+        "tiempo": "25 min aprox"
+      }
+    },
+    {
+      "id": 3,
+      "nombre": "Pan de Lomo",
+      "rendimiento": "50 unidades",
+      "ingredientes": [
+        { "nombre": "Premezcla", "cantidad": 5000, "unidad": "grs" },
+        { "nombre": "Azucar", "cantidad": 375, "unidad": "grs" },
+        { "nombre": "Goma Xantica", "cantidad": 75, "unidad": "grs" },
+        { "nombre": "Levadura", "cantidad": 30, "unidad": "grs" },
+        { "nombre": "Sal", "cantidad": 125, "unidad": "grs" },
+        { "nombre": "Leche Liquida", "cantidad": 1.5, "unidad": "litros" },
+        { "nombre": "Agua", "cantidad": 3.5, "unidad": "litros" },
+        { "nombre": "Margarina", "cantidad": 1, "unidad": "kg" }
+      ],
+      "procedimiento": "Agregar todo lo seco junto con la manteca hasta integrar bien, luego todos los liquidos y mucho batido.",
+      "coccion": {
+        "peso_por_unidad": "230 grs",
+        "temperatura_horno": 170,
+        "tiempo": "25 min",
+        "pintar": "con huevo",
+        "unidades_por_bandeja": 12,
+        "vapor": "al poner al horno"
+      }
+    },
+    {
+      "id": 4,
+      "nombre": "Pan Frances 2025",
+      "rendimiento": "variable",
+      "ingredientes": [
+        { "nombre": "Premezcla", "cantidad": 6000, "unidad": "grs" },
+        { "nombre": "Levadura", "cantidad": 80, "unidad": "grs" },
+        { "nombre": "Goma Xantica", "cantidad": 280, "unidad": "grs" },
+        { "nombre": "Pure de Papa", "cantidad": 600, "unidad": "grs" },
+        { "nombre": "Azucar", "cantidad": 60, "unidad": "grs" },
+        { "nombre": "Trigo Sarraceno", "cantidad": 600, "unidad": "grs" },
+        { "nombre": "Huevos", "cantidad": 18, "unidad": "grs" },
+        { "nombre": "Leche Liquida", "cantidad": 2000, "unidad": "grs" },
+        { "nombre": "Agua", "cantidad": 7000, "unidad": "grs" },
+        { "nombre": "Sal", "cantidad": 150, "unidad": "grs" },
+        { "nombre": "Margaran Masas", "cantidad": 400, "unidad": "grs" }
+      ],
+      "procedimiento": "Todo lo seco junto, agregar todos los liquidos y batido medio hasta unir todo.",
+      "coccion": {
+        "leudado": {
+          "temperatura_horno": 50,
+          "tiempo": "50 min"
+        },
+        "cocinado": {
+          "temperatura_horno": 180,
+          "tiempo": "45 min"
+        },
+        "peso_baguette_largo": "180 grs",
+        "peso_baguette_corto": "150 grs",
+        "corte": "no tan profundo",
+        "nota": "Se polvorea antes de enviarlos al horno con premezcla"
+      }
+    },
+    {
+      "id": 5,
+      "nombre": "Pan Miga",
+      "rendimiento": "12 moldes",
+      "ingredientes": [
+        { "nombre": "Maicena", "cantidad": 2400, "unidad": "grs" },
+        { "nombre": "Mandioca", "cantidad": 1800, "unidad": "grs" },
+        { "nombre": "Arroz", "cantidad": 1800, "unidad": "grs" },
+        { "nombre": "Sal", "cantidad": 150, "unidad": "grs" },
+        { "nombre": "Sarraceno", "cantidad": 600, "unidad": "grs" },
+        { "nombre": "Goma Xantica", "cantidad": 180, "unidad": "grs" },
+        { "nombre": "Gelatina Sin Sabor", "cantidad": 120, "unidad": "grs" },
+        { "nombre": "Psyllium", "cantidad": 60, "unidad": "grs" },
+        { "nombre": "Polvo para Hornear", "cantidad": 30, "unidad": "grs" },
+        { "nombre": "Levadura", "cantidad": 70, "unidad": "grs" },
+        { "nombre": "Agua", "cantidad": 4500, "unidad": "grs" },
+        { "nombre": "Aceite", "cantidad": 840, "unidad": "grs" },
+        { "nombre": "Miel", "cantidad": 500, "unidad": "grs" },
+        { "nombre": "Huevos", "cantidad": 36, "unidad": "unidades" }
+      ],
+      "procedimiento": "Todo lo seco junto, agregar todos los liquidos y batir.",
+      "coccion": {
+        "peso_por_unidad": "1380 kg",
+        "temperatura_horno": 160,
+        "tiempo": "60 min",
+        "batido": "bastante batido"
+      }
+    },
+    {
+      "id": 6,
+      "nombre": "Criollos",
+      "rendimiento": "20 kilos",
+      "ingredientes": [
+        { "nombre": "Mandioca", "cantidad": 4800, "unidad": "grs" },
+        { "nombre": "Arroz", "cantidad": 1200, "unidad": "grs" },
+        { "nombre": "Maicena", "cantidad": 2400, "unidad": "grs" },
+        { "nombre": "Sarraceno", "cantidad": 1200, "unidad": "grs" },
+        { "nombre": "Goma Xantica", "cantidad": 240, "unidad": "grs" },
+        { "nombre": "Levadura", "cantidad": 120, "unidad": "grs" },
+        { "nombre": "Azucar", "cantidad": 240, "unidad": "grs" },
+        { "nombre": "Sal", "cantidad": 300, "unidad": "grs" },
+        { "nombre": "Margarina", "cantidad": 1600, "unidad": "grs" },
+        { "nombre": "Huevos", "cantidad": 24, "unidad": "unidades" },
+        { "nombre": "Agua", "cantidad": 4, "unidad": "litros" },
+        { "nombre": "Margadan Hojaldre", "cantidad": 2000, "unidad": "grs" }
+      ],
+      "procedimiento": "Agregar todo lo seco junto la manteca, una vez integrada agregar los liquidos de a poco a batido medio hasta unificar la masa, y luego rapido por 5 min. Separar en partes de aproximadamente 2 kg. Sobar de a una hasta estar una masa lisa. Agregar manteca para hojaldrar 1kg por cada parte de masa. Cerrar y empezar a hojaldrar en sobadora. 3 vueltas simples de punta. Pasar la pica y cortar en cuadraditos.",
+      "coccion": {
+        "pintar": "con huevo",
+        "temperatura_horno": 180,
+        "tiempo": "15 min"
+      }
+    },
+    {
+      "id": 7,
+      "nombre": "Chipa",
+      "rendimiento": "15 kgs",
+      "ingredientes": [
+        { "nombre": "Mandioca", "cantidad": 10000, "unidad": "grs" },
+        { "nombre": "Queso Pategras", "cantidad": 6000, "unidad": "grs" },
+        { "nombre": "Manteca", "cantidad": 2000, "unidad": "grs" },
+        { "nombre": "Huevos", "cantidad": 40, "unidad": "unidades" },
+        { "nombre": "Sal", "cantidad": 160, "unidad": "grs" },
+        { "nombre": "Leche", "cantidad": 4, "unidad": "litros" }
+      ],
+      "procedimiento": "Agregar los secos junto a la manteca, una vez integrado agregar el queso ya rallado, por ultimo los huevos y la leche de a poco.",
+      "coccion": {
+        "batido": "medio",
+        "peso_bolitas": "30 grs aprox",
+        "temperatura_horno": 180,
+        "tiempo": "20 min"
+      }
+    },
+    {
+      "id": 8,
+      "nombre": "Pizzetas",
+      "rendimiento": "90 unidades",
+      "ingredientes": [
+        { "nombre": "Premezcla", "cantidad": 10500, "unidad": "grs" },
+        { "nombre": "Sal", "cantidad": 225, "unidad": "grs" },
+        { "nombre": "Azucar", "cantidad": 180, "unidad": "grs" },
+        { "nombre": "Levadura", "cantidad": 100, "unidad": "grs" },
+        { "nombre": "Aceite", "cantidad": 50, "unidad": "ml" },
+        { "nombre": "Agua", "cantidad": 8000, "unidad": "ml" },
+        { "nombre": "Pure Tomate", "cantidad": 1000, "unidad": "ml" },
+        { "nombre": "Oregano", "cantidad": 50, "unidad": "grs" }
+      ],
+      "procedimiento": "En un bols poner a fermentar la levadura, azucar y la mitad del agua y dejar que leude. Por otro lado poner todo lo seco juntos y agregar todo el fermento, mas el agua restante y el aceite. Preparacion de la salsa: Agregar en un bols el pure de tomates junto el oregano, una cucharada de aceite y una pizca de sal, mezclar y lista para pintar.",
+      "coccion": {
+        "peso_por_unidad": "220 grs",
+        "temperatura_horno": 180,
+        "tiempo": "15 min"
+      }
+    },
+    {
+      "id": 9,
+      "nombre": "Budines",
+      "rendimiento": "70 unidades",
+      "sabores": ["vainilla", "limon", "naranja", "coco", "chip", "manzana", "pera"],
+      "ingredientes": [
+        { "nombre": "Margarina", "cantidad": 4000, "unidad": "grs" },
+        { "nombre": "Azucar", "cantidad": 6400, "unidad": "grs" },
+        { "nombre": "Huevos", "cantidad": 96, "unidad": "unidades" },
+        { "nombre": "Esencia Vainilla", "cantidad": 3, "unidad": "tapas del mismo envase" },
+        { "nombre": "Premezcla", "cantidad": 6400, "unidad": "grs" },
+        { "nombre": "Maicena", "cantidad": 1600, "unidad": "grs" },
+        { "nombre": "Polvo de Hornear", "cantidad": 240, "unidad": "grs" },
+        { "nombre": "Goma Xantica", "cantidad": 10, "unidad": "grs" },
+        { "nombre": "Leche", "cantidad": 1500, "unidad": "ml" }
+      ],
+      "procedimiento": "IMPORTANTE: Batir con la lira no con el globo. Batir la margarina junto el azucar, luego agregar los huevo y la vainilla, una vez integrado ponemos todos los secos juntos (tamizados). Luego separar para los sabores. VAINILLA: solo escencia. LIMON/NARANJA: ralladura de la fruta/esencia y jugo. CHIPS: solo agregar chips. COCO: humedecer el coco con 1 huevo y leche luego agregar a la mezcla. PERA Y MANZANA: cortar la fruta en cubitos y agregar a la mezcla.",
+      "coccion": {
+        "batido": "mucho batido hasta cambiar el color",
+        "molde_budinera": "280 grs",
+        "peso_por_unidad": "330 grs",
+        "temperatura_horno": 160,
+        "tiempo": "45 minutos"
+      }
+    },
+    {
+      "id": 10,
+      "nombre": "Budines de Zanahoria",
+      "rendimiento": "20 unidades",
+      "ingredientes": [
+        { "nombre": "Premezcla", "cantidad": 2600, "unidad": "grs" },
+        { "nombre": "Sarraceno", "cantidad": 420, "unidad": "grs" },
+        { "nombre": "Aceite", "cantidad": 1200, "unidad": "ml" },
+        { "nombre": "Azucar", "cantidad": 1500, "unidad": "grs" },
+        { "nombre": "Azucar Impalpable", "cantidad": 700, "unidad": "grs" },
+        { "nombre": "Azucar Mascabo", "cantidad": 700, "unidad": "grs" },
+        { "nombre": "Miel", "cantidad": 350, "unidad": "ml" },
+        { "nombre": "Naranja Ralladura", "cantidad": 6, "unidad": "unidades" },
+        { "nombre": "Huevos", "cantidad": 24, "unidad": "unidades" },
+        { "nombre": "Canela", "cantidad": 10, "unidad": "grs" },
+        { "nombre": "Polvo para Hornear", "cantidad": 80, "unidad": "grs" },
+        { "nombre": "Leche Liquida", "cantidad": 800, "unidad": "ml" },
+        { "nombre": "Zanahoria Rallada", "cantidad": 2000, "unidad": "grs" },
+        { "nombre": "Nueces", "cantidad": 600, "unidad": "grs" },
+        { "nombre": "Pasas de Uva", "cantidad": 600, "unidad": "grs" }
+      ],
+      "procedimiento": "Agregar el aceite, las 2 azucar, miel, huevos y la ralladura de naranja y batir, hasta que cambie de color, agregar los huevos y dar mucho batido, (no batir con la lira se bate con el globo) una vez al cambiar el color agregar todo lo seco intercalando con la leche en movimientos envolventes, por ultimo la zanahoria. Antes de poner en los moldes agregar las nueces y pasas.",
+      "coccion": {
+        "batido": "es muy importante el batido",
+        "peso_por_unidad": "420 grs",
+        "molde": "20 x 25",
+        "temperatura_horno": 180,
+        "tiempo": "45 minutos"
+      }
+    },
+    {
+      "id": 11,
+      "nombre": "Cookies de Chocolate",
+      "rendimiento": "100 unidades x 150 grs",
+      "ingredientes": [
+        { "nombre": "Azucar", "cantidad": 3000, "unidad": "grs" },
+        { "nombre": "Margaran Masas", "cantidad": 3000, "unidad": "grs" },
+        { "nombre": "Huevos", "cantidad": 36, "unidad": "unidades" },
+        { "nombre": "Goma Xantica", "cantidad": 40, "unidad": "grs" },
+        { "nombre": "Premezcla", "cantidad": 3000, "unidad": "grs" },
+        { "nombre": "Bicarbonato de Amonio", "cantidad": 60, "unidad": "grs" },
+        { "nombre": "Cacao", "cantidad": 60, "unidad": "grs" },
+        { "nombre": "Esencia de Chocolate", "cantidad": 10, "unidad": "ml" },
+        { "nombre": "Colorante Caramelo", "cantidad": 10, "unidad": "ml" }
+      ],
+      "procedimiento": "Agregar la manteca junto el azucar y batir, agregar los huevos mezclar, una vez integrado todo agregar los secos todos juntos.",
+      "coccion": {
+        "reposo": "en frio",
+        "sobadora": "N8",
+        "cortante": "N4",
+        "bandeja": "enmantecadas, separadas una de la otra",
+        "temperatura_horno": 160,
+        "tiempo": "15 minutos"
+      }
+    },
+    {
+      "id": 12,
+      "nombre": "Cookies de Coco",
+      "rendimiento": "40 unidades x 150 grs",
+      "ingredientes": [
+        { "nombre": "Margarina", "cantidad": 3, "unidad": "kg" },
+        { "nombre": "Azucar", "cantidad": 3, "unidad": "kg" },
+        { "nombre": "Huevos", "cantidad": 21, "unidad": "unidades" },
+        { "nombre": "Miel", "cantidad": 6, "unidad": "cucharadas" },
+        { "nombre": "Polvo para Hornear", "cantidad": 90, "unidad": "grs" },
+        { "nombre": "Goma Xantica", "cantidad": 30, "unidad": "grs" },
+        { "nombre": "Coco", "cantidad": 600, "unidad": "grs" },
+        { "nombre": "Premezcla", "cantidad": 6, "unidad": "kg" }
+      ],
+      "procedimiento": "Mezclar la margarina pomada junto el azucar y la miel, luego los huevos y por ultimo todos los secos.",
+      "coccion": {
+        "reposo": "en frio",
+        "sobadora": "N8",
+        "cortante": "N5",
+        "forma": "armar anillo con cortante N2",
+        "temperatura_horno": 160,
+        "tiempo": "10 min"
+      }
+    },
+    {
+      "id": 13,
+      "nombre": "Cookies Limon",
+      "rendimiento": "100 unidades x 150 grs",
+      "ingredientes": [
+        { "nombre": "Margarina", "cantidad": 3300, "unidad": "grs" },
+        { "nombre": "Azucar Impalpable", "cantidad": 4050, "unidad": "grs" },
+        { "nombre": "Huevos", "cantidad": 45, "unidad": "unidades" },
+        { "nombre": "Premezcla", "cantidad": 7500, "unidad": "grs" },
+        { "nombre": "Sal", "cantidad": 6, "unidad": "grs" },
+        { "nombre": "Esencia de Limon", "cantidad": 30, "unidad": "ml" },
+        { "nombre": "Xantica", "cantidad": 15, "unidad": "grs" },
+        { "nombre": "Limones", "cantidad": 9, "unidad": "unidades" }
+      ],
+      "procedimiento": "Agregar la manteca junto el azucar y batir, agregar las yemas de a 1, luego jugo y esencia de limon, por ultimo todo lo secos.",
+      "coccion": {
+        "sobadora": "hasta llegar a 9",
+        "cortante": "N4",
+        "bandeja": "enmantecada separadas una a la otra",
+        "espolvorear": "arriba con azucar",
+        "temperatura_horno": 160,
+        "tiempo": "15 min"
+      }
+    },
+    {
+      "id": 14,
+      "nombre": "Cookies Naranja",
+      "rendimiento": "unidades x 150 grs",
+      "ingredientes": [
+        { "nombre": "Margarina", "cantidad": 3300, "unidad": "grs" },
+        { "nombre": "Azucar Impalpable", "cantidad": 4050, "unidad": "grs" },
+        { "nombre": "Huevos", "cantidad": 45, "unidad": "unidades" },
+        { "nombre": "Premezcla", "cantidad": 7500, "unidad": "grs" },
+        { "nombre": "Sal", "cantidad": 6, "unidad": "grs" },
+        { "nombre": "Esencia de Naranja", "cantidad": 30, "unidad": "ml" },
+        { "nombre": "Naranja", "cantidad": 9, "unidad": "unidades" },
+        { "nombre": "Xantica", "cantidad": 15, "unidad": "grs" }
+      ],
+      "procedimiento": "Agregar la manteca junto el azucar y batir, agregar las yemas de a 1, luego jugo, esencia de naranja, por ultimo todo lo secos.",
+      "coccion": {
+        "sobadora": "hasta llegar a 9",
+        "cortante": "N4",
+        "bandeja": "enmantecada separadas una a la otra",
+        "espolvorear": "arriba con azucar",
+        "temperatura_horno": 160,
+        "tiempo": "15 min"
+      }
+    },
+    {
+      "id": 15,
+      "nombre": "Cookies Marmoladas",
+      "rendimiento": "80 unidades x 200 grs",
+      "ingredientes_vainilla": [
+        { "nombre": "Margarina", "cantidad": 2, "unidad": "kg" },
+        { "nombre": "Azucar", "cantidad": 2, "unidad": "kg" },
+        { "nombre": "Huevos", "cantidad": 25, "unidad": "unidades" },
+        { "nombre": "Premezcla", "cantidad": 4, "unidad": "kg" },
+        { "nombre": "Bicarbonato de Amonio", "cantidad": 60, "unidad": "grs" },
+        { "nombre": "Xantica", "cantidad": 40, "unidad": "grs" },
+        { "nombre": "Esencia de Vainilla", "cantidad": 5, "unidad": "ml" },
+        { "nombre": "Cacao Amargo", "cantidad": 60, "unidad": "grs" },
+        { "nombre": "Amoniaco", "cantidad": 60, "unidad": "grs" }
+      ],
+      "ingredientes_chocolate": [
+        { "nombre": "Margarina", "cantidad": 2, "unidad": "kg" },
+        { "nombre": "Azucar", "cantidad": 2, "unidad": "kg" },
+        { "nombre": "Huevos", "cantidad": 14, "unidad": "unidades" },
+        { "nombre": "Premezcla", "cantidad": 4, "unidad": "kg" },
+        { "nombre": "Bicarbonato de Amonio", "cantidad": 60, "unidad": "grs" },
+        { "nombre": "Xantica", "cantidad": 40, "unidad": "grs" },
+        { "nombre": "Colorante Caramelo", "cantidad": 3, "unidad": "tapitas" },
+        { "nombre": "Cacao", "cantidad": 60, "unidad": "grs" }
+      ],
+      "procedimiento": "Agregar la manteca junto el azucar y mezclar, luego agregar los huevos y por ultimo la premezcla, la xantica y el amoniaco. Una vez lista la masa retirar la mitad y a la otra mitad agregar el huevo que queda junto el cacao amargo. Armar tiras de 2 colores (chocolate y vainilla). Unir una de cada una. Cortar.",
+      "coccion": {
+        "espolvorear": "arriba con azucar",
+        "temperatura_horno": 160,
+        "tiempo": "15 min"
+      }
+    },
+    {
+      "id": 16,
+      "nombre": "Pepas de Membrillo",
+      "rendimiento": "60 unidades",
+      "ingredientes": [
+        { "nombre": "Margarina", "cantidad": 4000, "unidad": "grs" },
+        { "nombre": "Azucar", "cantidad": 2000, "unidad": "grs" },
+        { "nombre": "Yemas de Huevos", "cantidad": 80, "unidad": "unidades" },
+        { "nombre": "Esencia de Vainilla", "cantidad": 30, "unidad": "ml" },
+        { "nombre": "Premezcla", "cantidad": 3800, "unidad": "grs" },
+        { "nombre": "Polvo para Hornear", "cantidad": 20, "unidad": "grs" },
+        { "nombre": "Dulce de Membrillo", "cantidad": null, "unidad": "cantidad necesaria" }
+      ],
+      "procedimiento": "Agregar la manteca, margarina y azucar y mezclar, luego agregar las yemas de una, los huevos y por ultimo la pre mezcla. Armar tiras y cortar. Con el dedo armar un hoyito para poner el dulce de membrillo.",
+      "coccion": {
+        "bandeja": "separar en una placa una de la otra",
+        "temperatura_horno": 160,
+        "tiempo": "15 min"
+      }
+    },
+    {
+      "id": 17,
+      "nombre": "Scones",
+      "rendimiento": "10 unidades",
+      "ingredientes": [
+        { "nombre": "Premezcla", "cantidad": 1500, "unidad": "grs" },
+        { "nombre": "Azucar Impalpable", "cantidad": 450, "unidad": "grs" },
+        { "nombre": "Yemas de Huevos", "cantidad": 3, "unidad": "unidades" },
+        { "nombre": "Huevos", "cantidad": 6, "unidad": "unidades" },
+        { "nombre": "Esencia de Vainilla", "cantidad": 10, "unidad": "ml" },
+        { "nombre": "Manteca", "cantidad": 450, "unidad": "grs" },
+        { "nombre": "Polvo para Hornear", "cantidad": 20, "unidad": "grs" },
+        { "nombre": "Sal", "cantidad": 5, "unidad": "grs" },
+        { "nombre": "Leche Liquida", "cantidad": 115, "unidad": "ml" }
+      ],
+      "procedimiento": "Ponemos la manteca junto el azucar y batimos, vamos agregando de a 1 los huevos y yemas, agregamos la leche y luego todos los secos tamizados.",
+      "coccion": {
+        "pintar": "con huevo luego con manteca",
+        "espolvorear": "con azucar",
+        "temperatura_horno": 160,
+        "tiempo": "15/17 min"
+      }
+    },
+    {
+      "id": 18,
+      "nombre": "Galletitas de Queso",
+      "rendimiento": "48 unidades x 100 grs",
+      "ingredientes": [
+        { "nombre": "Margarina", "cantidad": 2000, "unidad": "grs" },
+        { "nombre": "Queso Pategras", "cantidad": 2000, "unidad": "grs" },
+        { "nombre": "Premezcla", "cantidad": 2600, "unidad": "grs" },
+        { "nombre": "Huevos", "cantidad": 12, "unidad": "unidades" },
+        { "nombre": "Yemas", "cantidad": 12, "unidad": "unidades" },
+        { "nombre": "Sal", "cantidad": 60, "unidad": "grs" },
+        { "nombre": "Semillas Lino", "cantidad": 50, "unidad": "grs" }
+      ],
+      "procedimiento": "Poner la harina junto la sal y la margarina, una vez integrada agregar el queso y por ultimo los huevos y yemas.",
+      "coccion": {
+        "sobadora": "N7",
+        "cortante": "N3",
+        "pintar": "con huevo",
+        "espolvorear": "con semillas",
+        "temperatura_horno": 160,
+        "tiempo": "18 min"
+      }
+    },
+    {
+      "id": 19,
+      "nombre": "Talitas c/s Semillas",
+      "rendimiento": "16 unidades x 200 grs",
+      "ingredientes": [
+        { "nombre": "Premezcla", "cantidad": 1000, "unidad": "grs" },
+        { "nombre": "Maicena", "cantidad": 1000, "unidad": "grs" },
+        { "nombre": "Sal", "cantidad": 40, "unidad": "grs" },
+        { "nombre": "Goma Xantica", "cantidad": 20, "unidad": "grs" },
+        { "nombre": "Huevos", "cantidad": 4, "unidad": "unidades" },
+        { "nombre": "Levadura", "cantidad": 20, "unidad": "grs" },
+        { "nombre": "Margarina", "cantidad": 400, "unidad": "grs" },
+        { "nombre": "Agua", "cantidad": 1000, "unidad": "ml" }
+      ],
+      "procedimiento": "Poner todo lo seco junto la manteca mezclar hasta integrar bien, luego agregar los huevos y el agua batir hasta unir todo. SEMILLAS: Agregar a la masa las semillas a gusto.",
+      "coccion": {
+        "textura": "es una masa lisa, no blanda",
+        "sobadora": "N2",
+        "corte": "en cuadritos 5x5",
+        "temperatura_horno": 160,
+        "tiempo": "20 min"
+      }
+    },
+    {
+      "id": 20,
+      "nombre": "Coquitos",
+      "rendimiento": "16 unidades",
+      "ingredientes": [
+        { "nombre": "Huevos", "cantidad": 32, "unidad": "unidades" },
+        { "nombre": "Azucar", "cantidad": 120, "unidad": "grs" },
+        { "nombre": "Miel", "cantidad": 20, "unidad": "grs" },
+        { "nombre": "Margarina", "cantidad": 100, "unidad": "grs" },
+        { "nombre": "Premezcla", "cantidad": 80, "unidad": "grs" },
+        { "nombre": "Coco", "cantidad": 1000, "unidad": "grs" },
+        { "nombre": "Pastelera", "cantidad": 300, "unidad": "grs" }
+      ],
+      "ingredientes_pastelera": [
+        { "nombre": "Huevos", "cantidad": 16, "unidad": "unidades" },
+        { "nombre": "Azucar", "cantidad": 750, "unidad": "grs" },
+        { "nombre": "Miel", "cantidad": 1, "unidad": "cucharada" },
+        { "nombre": "Margarina", "cantidad": 50, "unidad": "grs" },
+        { "nombre": "Premezcla", "cantidad": 1, "unidad": "punado" }
+      ],
+      "procedimiento": "Poner en una olla los huevos, el azucar, la margarina, la miel y la premezcla., batir y poner a calentar... cuando la preparacion llegue a estar caliente sin quemarse, retirar del fuego y agregar coco hasta que sea una mezcla uniforme, agregar pastelera si es necesario hidratar. Poner la mezcla en una manga con pico rizado. Armar los coquitos en una placa en mantecada y papel manteca.",
+      "coccion": {
+        "temperatura_horno": 170,
+        "tiempo": "variable"
+      }
+    },
+    {
+      "id": 21,
+      "nombre": "Palmeritas",
+      "rendimiento": "65 unidades",
+      "ingredientes": [
+        { "nombre": "Premezcla", "cantidad": 4500, "unidad": "grs" },
+        { "nombre": "Maicena", "cantidad": 4500, "unidad": "grs" },
+        { "nombre": "Sal", "cantidad": 180, "unidad": "grs" },
+        { "nombre": "Goma Xantica", "cantidad": 135, "unidad": "grs" },
+        { "nombre": "Levadura", "cantidad": 45, "unidad": "grs" },
+        { "nombre": "Polvo de Hornear", "cantidad": 5, "unidad": "grs" },
+        { "nombre": "Esencia de Vainilla", "cantidad": 10, "unidad": "ml" },
+        { "nombre": "Huevos", "cantidad": 27, "unidad": "unidades" },
+        { "nombre": "Agua", "cantidad": 6000, "unidad": "ml" },
+        { "nombre": "Margarina", "cantidad": 4000, "unidad": "grs" }
+      ],
+      "procedimiento": "Agregar la premezcla, maicena, sal, levadura y goma xantica a la amasadora y mezclar, luego agregar el agua y los huevos, batir... Guardar en frio para reposar. Poco batido. Una vez que la masa descanso un dia, podemos utilizarla. Sobar una parte de la masa (aproximadamente 4 kgs) hasta que su textura quede suave, luego formar un rectangulo y en el medio agregar 2 kgs de margarina para hojaldre y cerrar, luego pasamos por sobadora en N16, luego en N11 y hacerle 4 vueltas simples. Repetir 4 veces y en la 5ta terminar en N4. Cortar rectangulos de 20cm por 60cm, poner abajo y arriba de la masa bastante azucar, luego con el palo de amasar estiramos un poco para hacer que el azucar se adhiera. Luego giramos de cada punta para darle la forma a la palmerita. Cortar mas o menos 2cm de ancho, acomodar en bandejas espolvoreadas con azucar.",
+      "coccion": {
+        "temperatura_horno": 210,
+        "tiempo": "8 minutos"
+      }
+    },
+    {
+      "id": 22,
+      "nombre": "Cuadrado de Naranja",
+      "rendimiento": "32 unidades",
+      "ingredientes": [
+        { "nombre": "Huevos", "cantidad": 37, "unidad": "unidades" },
+        { "nombre": "Azucar", "cantidad": 1700, "unidad": "grs" },
+        { "nombre": "Aceite", "cantidad": 900, "unidad": "ml" },
+        { "nombre": "Premezcla", "cantidad": 1500, "unidad": "grs" },
+        { "nombre": "Naranja", "cantidad": 9, "unidad": "unidades" },
+        { "nombre": "Esencia Naranja", "cantidad": 50, "unidad": "ml" },
+        { "nombre": "Colorante Caramelo", "cantidad": 50, "unidad": "ml" }
+      ],
+      "procedimiento": "Ponemos en un bols los huevos, azucar y aceite, luego agregar la premezcla tamizada, con movimientos envolventes. Poner en molde ya enmantecado. Glaseado.",
+      "coccion": {}
+    },
+    {
+      "id": 23,
+      "nombre": "Cuadrado de Limon",
+      "rendimiento": "32 unidades",
+      "ingredientes": [
+        { "nombre": "Huevos", "cantidad": 37, "unidad": "unidades" },
+        { "nombre": "Azucar", "cantidad": 1700, "unidad": "grs" },
+        { "nombre": "Aceite", "cantidad": 900, "unidad": "ml" },
+        { "nombre": "Premezcla", "cantidad": 1500, "unidad": "grs" },
+        { "nombre": "Limon", "cantidad": 9, "unidad": "unidades" },
+        { "nombre": "Esencia Limon", "cantidad": 50, "unidad": "ml" },
+        { "nombre": "Colorante Caramelo", "cantidad": 50, "unidad": "ml" }
+      ],
+      "procedimiento": "Ponemos en un bols los huevos, azucar y aceite con movimientos envolventes, luego agregar la premezcla tamizada (en movimientos envolventes). Poner en molde ya enmantecado. Glaseado se agrega cuando el bizcochuelo esta cocinado.",
+      "coccion": {}
+    },
+    {
+      "id": 24,
+      "nombre": "Cuadrado de Coco DDL",
+      "rendimiento": "32 unidades",
+      "ingredientes": [
+        { "nombre": "Margadant Masa", "cantidad": 3000, "unidad": "grs" },
+        { "nombre": "Premezcla", "cantidad": 6000, "unidad": "grs" },
+        { "nombre": "Huevos", "cantidad": 18, "unidad": "unidades" },
+        { "nombre": "Polvo para Hornear", "cantidad": 50, "unidad": "grs" },
+        { "nombre": "Azucar", "cantidad": 3000, "unidad": "grs" },
+        { "nombre": "Miel", "cantidad": 180, "unidad": "grs" },
+        { "nombre": "Goma Xantica", "cantidad": 30, "unidad": "grs" },
+        { "nombre": "Dulce de Leche", "cantidad": 2500, "unidad": "grs" },
+        { "nombre": "Coco", "cantidad": 300, "unidad": "grs" }
+      ],
+      "procedimiento": "Mezclar la margarina pomada junto el azucar y la miel, luego los huevos y por ultimo todos los secos. Agregar 2500 kg de dulce de leche, 30 grs coco. (Recordar que de esta cantidad salen la masa de todos los cuadrados).",
+      "coccion": {
+        "reposo": "en frio",
+        "sobadora": "N8",
+        "temperatura_horno": 160,
+        "tiempo": "10 min"
+      },
+      "rendimiento_masa": [
+        "1 bandeja grande de crumble de manzana",
+        "1 coco",
+        "1 frola",
+        "1 bandeja chica de ricota",
+        "11 bases chicas para tartitas"
+      ]
+    },
+    {
+      "id": 25,
+      "nombre": "Hojaldre Mil Hojas",
+      "rendimiento": "30 unidades",
+      "ingredientes": [
+        { "nombre": "Premezcla", "cantidad": 1500, "unidad": "grs" },
+        { "nombre": "Maicena", "cantidad": 1500, "unidad": "grs" },
+        { "nombre": "Sal", "cantidad": 60, "unidad": "grs" },
+        { "nombre": "Goma Xantica", "cantidad": 45, "unidad": "grs" },
+        { "nombre": "Levadura", "cantidad": 30, "unidad": "grs" },
+        { "nombre": "Polvo de Hornear", "cantidad": 3, "unidad": "grs" },
+        { "nombre": "Esencia de Vainilla", "cantidad": 10, "unidad": "ml" },
+        { "nombre": "Huevos", "cantidad": 9, "unidad": "unidades" },
+        { "nombre": "Agua", "cantidad": 2000, "unidad": "ml" },
+        { "nombre": "Margarina Hojaldre", "cantidad": 2000, "unidad": "grs" },
+        { "nombre": "Dulce de Leche", "cantidad": 2500, "unidad": "grs" }
+      ],
+      "procedimiento": "Agregar la premezcla, maicena, sal, levadura y goma xantica a la amasadora y mezclar, luego agregar el agua y los huevos, batir... Guardar en frio para reposar. Poco batido. Una vez que la masa descanso un dia, podemos utilizarla. Sobar una parte de la masa (aproximadamente 4 kgs) hasta que su textura quede suave, luego formar un rectangulo y en el medio agregar 2 kgs de margarina para hojaldre y cerrar, luego pasamos por sobadora en N16, luego en N11 y hacerle 4 vueltas simples. Repetir 4 veces y en la 5ta terminar en N4. Cortar 4 rectangulos del tamano de la lata, dejar reposar unos minutos y hornear.",
+      "coccion": {
+        "temperatura_horno": 210,
+        "tiempo": "8 minutos"
+      }
+    },
+    {
+      "id": 26,
+      "nombre": "Alfajor de Coco",
+      "rendimiento": "30 unidades",
+      "ingredientes": [
+        { "nombre": "Huevos", "cantidad": 32, "unidad": "unidades" },
+        { "nombre": "Azucar", "cantidad": 120, "unidad": "grs" },
+        { "nombre": "Miel", "cantidad": 20, "unidad": "grs" },
+        { "nombre": "Margarina", "cantidad": 100, "unidad": "grs" },
+        { "nombre": "Premezcla", "cantidad": 80, "unidad": "grs" },
+        { "nombre": "Coco", "cantidad": 1000, "unidad": "grs" },
+        { "nombre": "Pastelera", "cantidad": 300, "unidad": "grs" }
+      ],
+      "procedimiento": "Poner en una olla los huevos, el azucar, la margarina, la miel y la premezcla., batir y poner a calentar... cuando la preparacion llegue a estar caliente sin quemarse, retirar del fuego y agregar coco hasta que sea una mezcla uniforme, agregar pastelera si es necesario hidratar. Armar los coquitos en una placa en mantecada y papel manteca. Agregar un aro de medida N6 y llenar 1/4 del mismo. Luego de hornear rellenar con dulce de leche.",
+      "coccion": {
+        "temperatura_horno": 170,
+        "tiempo": "variable"
+      }
+    },
+    {
+      "id": 27,
+      "nombre": "Alfajores de Maicena",
+      "rendimiento": "150 unidades",
+      "ingredientes": [
+        { "nombre": "Margarina", "cantidad": 1250, "unidad": "grs" },
+        { "nombre": "Azucar Impalpable", "cantidad": 700, "unidad": "grs" },
+        { "nombre": "Yemas", "cantidad": 70, "unidad": "unidades" },
+        { "nombre": "Esencia de Vainilla", "cantidad": 40, "unidad": "ml" },
+        { "nombre": "Maicena", "cantidad": 3000, "unidad": "grs" },
+        { "nombre": "Premezcla", "cantidad": 500, "unidad": "grs" },
+        { "nombre": "Polvo para Hornear", "cantidad": 70, "unidad": "grs" },
+        { "nombre": "Bicarbonato", "cantidad": 4, "unidad": "grs" },
+        { "nombre": "Vodka (Bols)", "cantidad": 40, "unidad": "ml" },
+        { "nombre": "Ralladura de Limon", "cantidad": 2, "unidad": "unidades" },
+        { "nombre": "Dulce de Leche", "cantidad": 45, "unidad": "grs por unidad grande" },
+        { "nombre": "Coco", "cantidad": null, "unidad": "cantidad necesaria" }
+      ],
+      "procedimiento": "Agregar la manteca junto el azucar impalpable y mezclar hasta formar una pasta, agregar las yemas de a una, luego la ralladura, la esencia y el bols batir. Por ultimo todos los secos juntos.",
+      "coccion": {
+        "reposo": "en frio",
+        "sobadora": "N8 (chicos), N9 (grandes)",
+        "cortante": "N3 (chicos), N6 (grandes)",
+        "temperatura_horno": 180,
+        "tiempo": "6/7 minutos"
+      }
+    },
+    {
+      "id": 28,
+      "nombre": "Alfajor de Chocolate",
+      "rendimiento": "400 unidades",
+      "ingredientes": [
+        { "nombre": "Azucar", "cantidad": 2000, "unidad": "grs" },
+        { "nombre": "Margarina", "cantidad": 2000, "unidad": "grs" },
+        { "nombre": "Huevos", "cantidad": 18, "unidad": "unidades" },
+        { "nombre": "Miel", "cantidad": 80, "unidad": "grs" },
+        { "nombre": "Cacao Amargo", "cantidad": 80, "unidad": "grs" },
+        { "nombre": "Chocolate Derretido", "cantidad": 1500, "unidad": "grs" },
+        { "nombre": "Maicena", "cantidad": 1000, "unidad": "grs" },
+        { "nombre": "Premezcla", "cantidad": 1000, "unidad": "grs" },
+        { "nombre": "Bicarbonato de Amonio", "cantidad": 40, "unidad": "grs" },
+        { "nombre": "Bicarbonato", "cantidad": 40, "unidad": "grs" },
+        { "nombre": "Polvo para Hornear", "cantidad": 40, "unidad": "grs" },
+        { "nombre": "Agua", "cantidad": 1000, "unidad": "ml" }
+      ],
+      "ingredientes_armado": [
+        { "nombre": "Chocolate blanco/negro", "cantidad": null, "unidad": "cantidad necesaria" },
+        { "nombre": "Dulce de Leche por unidad", "cantidad": 40, "unidad": "grs" }
+      ],
+      "procedimiento": "Agregar el azucar junto la manteca hasta formar una pasta, luego agregar los huevos, el agua, el amonio, la miel y el cacao, batir y agregar una parte de la premezcla y mezclar, una ves integrada pongo el chocolate y ahi nomas todos los secos restantes que me faltan. Enfriar y rellenar con dulce de leche y banar con chocolate negro o blanco.",
+      "coccion": {
+        "reposo": "en frio",
+        "sobadora": "N5",
+        "cortante": "N5 (grandes), N3 (chicos)",
+        "temperatura_horno": 160,
+        "tiempo": "13 minutos aprox"
+      }
+    },
+    {
+      "id": 29,
+      "nombre": "Chocotorta en Bandeja",
+      "rendimiento": "12 bandejas grandes (9x9 cm)",
+      "ingredientes": [
+        { "nombre": "Galletas de Chocolate", "cantidad": 780, "unidad": "grs" },
+        { "nombre": "Dulce de Leche", "cantidad": 1100, "unidad": "grs" },
+        { "nombre": "Queso Crema", "cantidad": 1100, "unidad": "grs" }
+      ],
+      "procedimiento": "1. Preparar la base: Pisar o procesar las galletitas hasta que queden tipo granulado grueso, sin llegar a polvo. Esta mezcla va a formar la base y las capas intermedias. 2. Preparar la crema: En un bowl grande, mezclar el queso crema con el dulce de leche hasta lograr una crema uniforme, sin vetas. 3. Armado de las bandejitas: Colocar una capa de galletitas rotas como base. Agregar una capa de la mezcla de queso y dulce de leche. Repetir este proceso haciendo al menos dos capas, idealmente tres si da la altura. Finalizar con una capa de la crema. 4. Decoracion: Rallar chocolate por encima de cada porcion para darle un toque visual y sabor extra. 5. Reposo: Llevar a la heladera minimo 4 horas (ideal de un dia para el otro) para que tome cuerpo y sabor.",
+      "coccion": {
+        "reposo": "minimo 4 horas en heladera"
+      }
+    },
+    {
+      "id": 30,
+      "nombre": "Cheesecakes de Frutilla en Cintura",
+      "rendimiento": "12 bandejas grandes",
+      "ingredientes": [
+        { "nombre": "Galletas de Limon", "cantidad": 360, "unidad": "grs" },
+        { "nombre": "Crema de Leche Chantilly Suave", "cantidad": 1000, "unidad": "grs" },
+        { "nombre": "Queso Crema", "cantidad": 750, "unidad": "grs" }
+      ],
+      "procedimiento": "Base de cookies: Triturar las cookies de limon groseramente (a polvo). Distribuir una base en cada cintura individual, presionando con una cuchara o espatula para formar una capa pareja. Relleno cremoso: Batir el todo junto crema y queso crema. Lograr una mezcla aireada y uniforme. Armado: Volcar la mezcla sobre la base de cookies en cada cintura. Decoracion: Una vez que esten firmes, cubrir con una capa de mermelada de frutilla. Se puede decorar con una rodajita fina de limon o ralladura para un toque extra.",
+      "coccion": {}
+    },
+    {
+      "id": 31,
+      "nombre": "Balcarces",
+      "rendimiento": "12 bandejas grandes",
+      "ingredientes": [
+        { "nombre": "Pionono", "cantidad": 900, "unidad": "grs" },
+        { "nombre": "Dulce de Leche", "cantidad": 1300, "unidad": "grs" },
+        { "nombre": "Crema Chantilly Suave", "cantidad": 1200, "unidad": "grs" },
+        { "nombre": "Durazno", "cantidad": 270, "unidad": "grs" },
+        { "nombre": "Azucar Comun", "cantidad": 1600, "unidad": "grs" }
+      ],
+      "procedimiento": "1. Pionono base: Cortar 18 capas de pionono rectangulares del tamano de cada molde Balcarce (3 capas por unidad). Reservar y tapar para que no se sequen. 2. Armado por unidad (x6 Balcarces grandes): Repetir este armado 6 veces, uno por cada molde: Colocar una capa de pionono en la base del molde. Humedecer con almibar. Untar con una capa de dulce de leche. Agregar el merengue en ese paso si lo haces fresco. Cubrir con otra capa de pionono, humedecer, dulce de leche, merengue y trozos de durazno. Agregar una ultima capa de pionono. Llevar a heladera para que tome cuerpo. Reserva una parte para usar en el relleno, y otra para decorar en copitos con manga. y presentacion: Una vez frios y firmes, cortar cada Balcarce grande a lo largo en 2 partes. Resultado: 12 lingotes iguales. Decorar cada uno con copitos de merengue y opcionalmente espolvorear con azucar impalpable o agregar trocitos de durazno encima.",
+      "coccion": {}
+    },
+    {
+      "id": 32,
+      "nombre": "Alfajores Cordobeses",
+      "rendimiento": "120 unidades",
+      "nota": "2025 no se realiza",
+      "ingredientes": [
+        { "nombre": "Premezcla", "cantidad": 3000, "unidad": "grs" },
+        { "nombre": "Maicena", "cantidad": 3000, "unidad": "grs" },
+        { "nombre": "Sal", "cantidad": 120, "unidad": "grs" },
+        { "nombre": "Goma Xantica", "cantidad": 90, "unidad": "grs" },
+        { "nombre": "Levadura", "cantidad": 40, "unidad": "grs" },
+        { "nombre": "Polvo de Hornear", "cantidad": 3, "unidad": "grs" },
+        { "nombre": "Esencia de Vainilla", "cantidad": 10, "unidad": "ml" },
+        { "nombre": "Huevos", "cantidad": 18, "unidad": "unidades" },
+        { "nombre": "Agua", "cantidad": 4000, "unidad": "ml" },
+        { "nombre": "Margarina", "cantidad": 3000, "unidad": "grs" }
+      ],
+      "procedimiento": "Agregar la premezcla, maicena, sal, levadura y goma xantica a la amasadora y mezclar, luego agregar el agua y los huevos, batir... Guardar en frio para reposar. Poco batido. Una vez que la masa descanso un dia, podemos utilizarla. Sobar una parte de la masa (aproximadamente 4 kgs) hasta que su textura quede suave, luego formar un rectangulo y en el medio agregar 2 kgs de margarina para hojaldre y cerrar, luego pasamos por sobadora en N16, luego en N11 y hacerle 4 vueltas simples. Repetir 4 veces y en la 5ta terminar en N4. Cortar con cortante N7 dejar reposar unos minutos y hornear.",
+      "coccion": {
+        "temperatura_horno": 210,
+        "tiempo": "8 minutos"
+      }
+    },
+    {
+      "id": 33,
+      "nombre": "Bizcochuelo Vainilla",
+      "rendimiento": "3 kilos",
+      "ingredientes": [
+        { "nombre": "Huevos", "cantidad": 37, "unidad": "unidades" },
+        { "nombre": "Azucar", "cantidad": 1700, "unidad": "grs" },
+        { "nombre": "Aceite", "cantidad": 900, "unidad": "ml" },
+        { "nombre": "Premezcla", "cantidad": 1500, "unidad": "grs" }
+      ],
+      "procedimiento": "Ponemos en un bols los huevos, azucar y aceite con movimientos envolventes, luego agregar la premezcla tamizada. En movimientos envolventes. Poner el molde ya enmantecado.",
+      "coccion": {}
+    },
+    {
+      "id": 34,
+      "nombre": "Bizcochuelo Chocolate",
+      "rendimiento": "3 kilos",
+      "ingredientes": [
+        { "nombre": "Huevos", "cantidad": 37, "unidad": "unidades" },
+        { "nombre": "Azucar", "cantidad": 1700, "unidad": "grs" },
+        { "nombre": "Aceite", "cantidad": 900, "unidad": "ml" },
+        { "nombre": "Premezcla", "cantidad": 1500, "unidad": "grs" },
+        { "nombre": "Cacao", "cantidad": 30, "unidad": "grs" },
+        { "nombre": "Colorante de Chocolate", "cantidad": 50, "unidad": "ml" },
+        { "nombre": "Esencia Chocolate", "cantidad": 50, "unidad": "ml" },
+        { "nombre": "Agua", "cantidad": 250, "unidad": "ml" }
+      ],
+      "procedimiento": "Ponemos en un bols los huevos, azucar y aceite con movimientos envolventes, luego agregar la premezcla tamizada. En movimientos envolventes. Poner el molde ya enmantecado.",
+      "coccion": {}
+    },
+    {
+      "id": 35,
+      "nombre": "Brownie",
+      "rendimiento": "32 bandejas grandes",
+      "ingredientes": [
+        { "nombre": "Premezcla", "cantidad": 1800, "unidad": "grs" },
+        { "nombre": "Azucar", "cantidad": 2250, "unidad": "grs" },
+        { "nombre": "Margarina", "cantidad": 990, "unidad": "grs" },
+        { "nombre": "Chocolate", "cantidad": 1530, "unidad": "grs" },
+        { "nombre": "Huevos", "cantidad": 27, "unidad": "unidades" },
+        { "nombre": "Polvo de Hornear", "cantidad": 15, "unidad": "grs" },
+        { "nombre": "Bicarbonato", "cantidad": 2, "unidad": "grs", "nota": "2025 no se le agrega" }
+      ],
+      "procedimiento": "Mientras derretimos el chocolate junto la margarina, en un bols ponemos los huevos y el azucar, apenas se unen (sin batir) agregamos el chocolate y la margarina. Por ultimo agregamos la premezcla, polvo p/hornear, una vez integrado todo poner el una bandeja enmantecada y enharinado.",
+      "coccion": {
+        "batido": "no lleva batido solo mezclar",
+        "temperatura_horno": 170,
+        "tiempo": "45 min"
+      }
+    },
+    {
+      "id": 36,
+      "nombre": "Pasta Frola",
+      "rendimiento": "32 bandejas grandes",
+      "ingredientes": [
+        { "nombre": "Margarina", "cantidad": 3000, "unidad": "grs" },
+        { "nombre": "Azucar", "cantidad": 3000, "unidad": "grs" },
+        { "nombre": "Huevos", "cantidad": 19, "unidad": "unidades" },
+        { "nombre": "Miel", "cantidad": 180, "unidad": "grs" },
+        { "nombre": "Polvo para Hornear", "cantidad": 90, "unidad": "grs" },
+        { "nombre": "Goma Xantica", "cantidad": 30, "unidad": "grs" },
+        { "nombre": "Premezcla", "cantidad": 6000, "unidad": "grs" },
+        { "nombre": "Dulce Membrillo o Batata", "cantidad": 5700, "unidad": "grs" }
+      ],
+      "procedimiento": "Mezclar la margarina pomada junto el azucar y la miel, luego los huevos y por ultimo todos los secos.",
+      "coccion": {
+        "reposo": "en frio",
+        "sobadora": "N8",
+        "temperatura_horno": 160,
+        "tiempo": "10 min"
+      },
+      "rendimiento_masa": [
+        "1 bandeja grande de crumble de manzana",
+        "1 coco",
+        "1 frola",
+        "1 bandeja chica de ricota",
+        "11 bases chicas para tartitas"
+      ]
+    },
+    {
+      "id": 37,
+      "nombre": "Medialunas y Facturas",
+      "rendimiento": "variable",
+      "ingredientes": [
+        { "nombre": "Maicena", "cantidad": 3600, "unidad": "grs" },
+        { "nombre": "Mandioca", "cantidad": 3600, "unidad": "grs" },
+        { "nombre": "Leche en Polvo", "cantidad": 3600, "unidad": "grs" },
+        { "nombre": "Azucar", "cantidad": 1920, "unidad": "grs" },
+        { "nombre": "Sal", "cantidad": 75, "unidad": "grs" },
+        { "nombre": "Levadura", "cantidad": 35, "unidad": "grs" },
+        { "nombre": "Goma Xantica", "cantidad": 80, "unidad": "grs" },
+        { "nombre": "Huevos", "cantidad": 72, "unidad": "unidades" },
+        { "nombre": "Miel", "cantidad": 1200, "unidad": "grs" },
+        { "nombre": "Esencia de Vainilla", "cantidad": 6, "unidad": "tapas (mismo envase)" },
+        { "nombre": "Esencia de Limon", "cantidad": 2, "unidad": "tapas (mismo envase)" },
+        { "nombre": "Esencia de Manteca", "cantidad": 2, "unidad": "tapas (mismo envase)" },
+        { "nombre": "Colorante Amarillo", "cantidad": 0.5, "unidad": "tapa (mismo envase)" },
+        { "nombre": "Agua", "cantidad": 2000, "unidad": "ml" }
+      ],
+      "ingredientes_empaste": [
+        { "nombre": "Margarina Masas", "cantidad": 5000, "unidad": "grs" },
+        { "nombre": "Margarina Hojaldre", "cantidad": 400, "unidad": "grs" },
+        { "nombre": "Premezcla", "cantidad": 1000, "unidad": "grs" }
+      ],
+      "procedimiento": "ARMADO DEL EMPASTE: Ponemos en la amasadora las 2 margarinas y la premezcla. Batimos hasta formar una pasta. Retirar de la amasadora, pesamos y separamos bollitos de 800 grs. PARA LA MASA: Ponemos en amasadora todo lo seco junto (maicena, mandioca, leche en polvo, azucar, sal, levadura, goma xantica.) Mezclar y agregar los huevos, la miel, las esencias, el colorante y la mitad del agua. Batir a velocidad baja, dentro de los 2 minutos con una espatula mezclar de abajo hacia arriba, controlando que no quede nada de mezcla sin batir y agregar de a poco el agua restante. Una vez todo integrado retirar la masa y separar de 2,500kg formando un rectangulo, en el medio agregamos 1 empaste (separado anteriormente) y lo encerramos para que no se llegue a escapar nada de la margarina. Repetimos asi hasta gastar toda la masa. Reposar 1 dia como minimo. Al dia siguiente sacar un baston y golpear con un palote sin romper la masa, logrando que el empaste se distribuye por toda la masa y vamos a la sobadora. Pasamos (siempre la masa de punta) primero en N25, luego en 15 y realizamos 3 vueltas simples y volver a realizar lo mismo 2 veces mas, en la cuarta vez pasamos en N11. Ponemos la masa en la mesa y recortamos 3 rectangulos de aproximadamente 15cm x 50cm, para luego formar triangulos (para medialunas) de 10x10cm aproximadamente. Y rectangulos (para facturas) de 10x5 cm. Listo para hacer el armado de facturas y medialunas. Dejar descansar hasta el dia siguiente.",
+      "coccion": {
+        "temperatura_horno": 180,
+        "tiempo": "15/17 minutos",
+        "vapor": "al ingresar al horno"
+      }
+    },
+    {
+      "id": 38,
+      "nombre": "Noquis",
+      "rendimiento": "20 unidades de 400 grs",
+      "ingredientes": [
+        { "nombre": "Leche Liquida", "cantidad": 3000, "unidad": "grs" },
+        { "nombre": "Sal", "cantidad": 1, "unidad": "cucharada" },
+        { "nombre": "Nuez Moscada", "cantidad": 20, "unidad": "grs" },
+        { "nombre": "Manteca", "cantidad": 100, "unidad": "grs" },
+        { "nombre": "Premezcla", "cantidad": 2000, "unidad": "grs" },
+        { "nombre": "Huevos", "cantidad": 4, "unidad": "unidades" },
+        { "nombre": "Polvo de Hornear", "cantidad": 40, "unidad": "grs", "nota": "no se coloca" }
+      ],
+      "procedimiento": "En una olla ponemos a hervir la leche, sal, nuez y manteca, una vez lista agregar la premezcla y huevos y batir hasta formar una pasta lisa, armar los noquis y pasar por noquera.",
+      "coccion": {
+        "coccion": "tiene que hervir",
+        "peso_por_unidad": "500 grs",
+        "bandeja": "750 ml"
+      }
+    },
+    {
+      "id": 39,
+      "nombre": "Fideos al Huevo (Spaghetti/Fetuccini)",
+      "rendimiento": "28 unidades de 400 grs",
+      "ingredientes": [
+        { "nombre": "Premezcla", "cantidad": 6000, "unidad": "grs" },
+        { "nombre": "Sal", "cantidad": 2, "unidad": "cucharadas" },
+        { "nombre": "Goma Xantica", "cantidad": 160, "unidad": "grs" },
+        { "nombre": "Huevos", "cantidad": 70, "unidad": "unidades" },
+        { "nombre": "Polvo de Hornear", "cantidad": 40, "unidad": "grs" },
+        { "nombre": "Colorante Amarillo", "cantidad": 6, "unidad": "gotas" }
+      ],
+      "variantes": {
+        "morron": "Procesar 1 morron y agregar a la masa.",
+        "espinaca": "Procesar 1 atado de espinaca y agregar a la masa."
+      },
+      "procedimiento": "Poner en la amasadora los secos (premezcla, sal, goma xantica, polvo para hornear) mezclar y agregar los liquidos (huevos y colorante). Una vez lista empezar a sobar la masa hasta que sea una masa manejable. Pasar en 6 y cortar rectangulos de 15x40cm aproximadamente y separar.",
+      "coccion": {
+        "terminaciones": {
+          "fetuccini": "N2",
+          "spaghetti": "N1.5"
+        }
+      }
+    },
+    {
+      "id": 40,
+      "nombre": "Ravioles de Ricota y Nuez",
+      "rendimiento": "180 unidades (bandejas)",
+      "ingredientes": [
+        { "nombre": "Premezcla", "cantidad": 1200, "unidad": "grs" },
+        { "nombre": "Goma Xantica", "cantidad": 24, "unidad": "grs" },
+        { "nombre": "Mandioca", "cantidad": 320, "unidad": "grs" },
+        { "nombre": "Maicena", "cantidad": 160, "unidad": "grs" },
+        { "nombre": "Margarina", "cantidad": 100, "unidad": "grs" },
+        { "nombre": "Sal", "cantidad": 26, "unidad": "grs" },
+        { "nombre": "Aceite", "cantidad": 10, "unidad": "ml" },
+        { "nombre": "Huevos", "cantidad": 4, "unidad": "unidades" },
+        { "nombre": "Polvo de Hornear", "cantidad": 8, "unidad": "grs" },
+        { "nombre": "Agua", "cantidad": 800, "unidad": "ml" }
+      ],
+      "relleno": ["Ricota", "Sal", "Nuez", "Mozzarella", "Nueces picadas"],
+      "procedimiento": "Agregar a la amasadora todo lo seco (premezcla, goma xantica, mandioca, maicena, polvo p/hornear, sal) mezclar y agregar todos los liquidos juntos (huevos, aceite, agua) batir hasta formar una masa lisa. Para ravioles de ricota y nuez: Masa blanca. Comenzar a pasar por la sobadora en 14, 10, 8, 6 hasta conseguir que la masa sea manejable. Terminacion N3. Colocar la masa sobre los moldes, enharinado pintando luego con huevo luego agregar relleno y tapa, desmoldar, colocar ravioles en bandeja enharinada.",
+      "coccion": {}
+    },
+    {
+      "id": 41,
+      "nombre": "Ravioles de Pollo y Verdura",
+      "rendimiento": "180 unidades (bandejas)",
+      "ingredientes": [
+        { "nombre": "Premezcla", "cantidad": 1200, "unidad": "grs" },
+        { "nombre": "Goma Xantica", "cantidad": 24, "unidad": "grs" },
+        { "nombre": "Mandioca", "cantidad": 320, "unidad": "grs" },
+        { "nombre": "Maicena", "cantidad": 160, "unidad": "grs" },
+        { "nombre": "Margarina", "cantidad": 100, "unidad": "grs" },
+        { "nombre": "Sal", "cantidad": 26, "unidad": "grs" },
+        { "nombre": "Aceite", "cantidad": 10, "unidad": "ml" },
+        { "nombre": "Huevos", "cantidad": 4, "unidad": "unidades" },
+        { "nombre": "Polvo de Hornear", "cantidad": 8, "unidad": "grs" },
+        { "nombre": "Agua", "cantidad": 800, "unidad": "ml" }
+      ],
+      "relleno": {
+        "ingredientes": ["Pollo 1500 kg", "Espinaca (hervida)", "Cebolla", "Ajo", "Pimiento rojo"],
+        "condimentos": ["Sal", "Pimienta"]
+      },
+      "procedimiento": "Agregar en la amasadora todo lo seco (premezcla, goma xantica, mandioca, maicena, polvo p/hornear, sal) mezclar y agregar luego los liquidos (huevos, aceite, agua). Luego agregar el atado de espinacas procesado. Mezclar hasta lograr una masa lisa. Pasar por sobadora hasta conseguir que la masa sea manejable. RELLENO: Utilizamos pollo 1500kg, espinaca que se hierve. Rehogar la cebolla el ajo, pimiento rojo, cortado bien pequeno, integrando todo para condimentar con sal, pimienta, finalmente se pasa por procesadora.",
+      "coccion": {}
+    },
+    {
+      "id": 42,
+      "nombre": "Sorrentinos Jamon y Muzza",
+      "rendimiento": "216 unidades (18 bandejas)",
+      "ingredientes": [
+        { "nombre": "Premezcla", "cantidad": 1200, "unidad": "grs" },
+        { "nombre": "Goma Xantica", "cantidad": 24, "unidad": "grs" },
+        { "nombre": "Mandioca", "cantidad": 320, "unidad": "grs" },
+        { "nombre": "Maicena", "cantidad": 160, "unidad": "grs" },
+        { "nombre": "Margarina", "cantidad": 100, "unidad": "grs" },
+        { "nombre": "Sal", "cantidad": 26, "unidad": "grs" },
+        { "nombre": "Aceite", "cantidad": 10, "unidad": "ml" },
+        { "nombre": "Huevos", "cantidad": 4, "unidad": "unidades" },
+        { "nombre": "Polvo de Hornear", "cantidad": 8, "unidad": "grs" },
+        { "nombre": "Agua", "cantidad": 800, "unidad": "ml" }
+      ],
+      "relleno": ["Jamon (procesado)", "Muzzarella (procesada, misma cantidad que jamon)", "Queso Crema", "Sal", "Nuez Moscada", "Queso Pategras rallado", "Ricota"],
+      "procedimiento": "Agregar en la amasadora todo lo seco (premezcla, goma xantica, mandioca, maicena, polvo p/hornear, sal) mezclar y agregar luego los liquidos (huevos, aceite, agua) mezclar hasta lograr una masa lisa. Pasar por sobadora hasta conseguir que la masa sea manejable. Terminacion N2 abajo, 1.5 arriba. RELLENO: Agregar el jamon junto con la muzzarella, (ambos procesado y misma cantidad) queso crema, sal, una pizca de nuez moscada y un poco de queso pategras rallado.",
+      "coccion": {}
+    },
+    {
+      "id": 43,
+      "nombre": "Sorrentino Remolacha",
+      "rendimiento": "variable",
+      "ingredientes": [
+        { "nombre": "Premezcla", "cantidad": 1200, "unidad": "grs" },
+        { "nombre": "Goma Xantica", "cantidad": 24, "unidad": "grs" },
+        { "nombre": "Mandioca", "cantidad": 320, "unidad": "grs" },
+        { "nombre": "Maicena", "cantidad": 160, "unidad": "grs" },
+        { "nombre": "Margarina", "cantidad": 100, "unidad": "grs" },
+        { "nombre": "Sal", "cantidad": 26, "unidad": "grs" },
+        { "nombre": "Aceite", "cantidad": 10, "unidad": "ml" },
+        { "nombre": "Huevos", "cantidad": 4, "unidad": "unidades" },
+        { "nombre": "Polvo de Hornear", "cantidad": 8, "unidad": "grs" },
+        { "nombre": "Agua", "cantidad": 800, "unidad": "ml" },
+        { "nombre": "Espinaca", "cantidad": 1, "unidad": "atado" }
+      ],
+      "relleno": {
+        "ingredientes": ["Remolacha 1 kg (cocinada)", "Calabacin grande (cocinado)"],
+        "condimentos": ["Queso Crema", "Queso Rallado", "Sal", "Nuez Moscada"]
+      },
+      "procedimiento": "Agregar en la amasadora todo lo seco (premezcla, goma xantica, mandioca, maicena, polvo p/hornear, sal) mezclar y agregar luego los liquidos (huevos, aceite, agua). Luego agregar el atado de espinacas procesado. Mezclar hasta lograr una masa lisa. Pasar por sobadora hasta conseguir que la masa sea manejable. Terminacion N2 abajo, 1.5 arriba. RELLENO: Utilizamos 1 kg de remolacha y 1 calabacin grande (ya cocinado) hacemos un pure y le agregamos queso crema, queso rallado, sal, nuez moscada mezclar y listo.",
+      "coccion": {}
+    },
+    {
+      "id": 44,
+      "nombre": "Sorrentino Ternera y Verdura",
+      "rendimiento": "216 unidades (18 bandejas)",
+      "ingredientes": [
+        { "nombre": "Premezcla", "cantidad": 1200, "unidad": "grs" },
+        { "nombre": "Goma Xantica", "cantidad": 24, "unidad": "grs" },
+        { "nombre": "Mandioca", "cantidad": 320, "unidad": "grs" },
+        { "nombre": "Maicena", "cantidad": 160, "unidad": "grs" },
+        { "nombre": "Margarina", "cantidad": 100, "unidad": "grs" },
+        { "nombre": "Sal", "cantidad": 26, "unidad": "grs" },
+        { "nombre": "Aceite", "cantidad": 10, "unidad": "ml" },
+        { "nombre": "Huevos", "cantidad": 4, "unidad": "unidades" },
+        { "nombre": "Polvo de Hornear", "cantidad": 8, "unidad": "grs" },
+        { "nombre": "Agua", "cantidad": 800, "unidad": "ml" },
+        { "nombre": "Espinaca", "cantidad": 1, "unidad": "atado" }
+      ],
+      "relleno": {
+        "ingredientes": ["Carne 1500 kg (hervida)", "Cebolla", "Ajo", "Pimiento rojo", "Cebolla de verdeo"],
+        "condimentos": ["Sal", "Pimienta", "Comino"]
+      },
+      "procedimiento": "Agregar en la amasadora todo lo seco (premezcla, goma xantica, mandioca, maicena, polvo p/hornear, sal) mezclar y agregar luego los liquidos (huevos, aceite, agua). Luego agregar el atado de espinacas procesado. Mezclar hasta lograr una masa lisa. Pasar por sobadora hasta conseguir que la masa sea manejable. RELLENO: Utilizamos carne 1500 kg, que se hierve. Rehogar la cebolla el ajo, pimiento rojo, cebolla de verdeo, cortado bien pequeno, integrando todo para condimentar con sal, pimienta y comino, finalmente se pasa por procesadora.",
+      "coccion": {}
+    }
+  ]
+}
