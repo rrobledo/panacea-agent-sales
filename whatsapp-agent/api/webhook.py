@@ -68,6 +68,13 @@ class handler(BaseHTTPRequestHandler):
             data = json.loads(body)
             log(f"Parsed JSON keys: {list(data.keys())}")
 
+            value = data["entry"][0]["changes"][0]["value"]
+            if "messages" in value:
+                log("Incoming USER message detected")
+
+            if "statuses" in value:
+                log("Status update received")
+
             payload = WhatsAppWebhookPayload(**data)
             log("Payload parsed successfully")
 
