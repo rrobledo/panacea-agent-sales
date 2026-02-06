@@ -9,10 +9,10 @@ class OrdersService:
     def __init__(self):
         self.api_url = ORDERS_API_URL
 
-    def create_order(self, order_data: Dict[str, Any]) -> Dict[str, Any]:
+    async def create_order(self, order_data: Dict[str, Any]) -> Dict[str, Any]:
         """Create order in external system"""
-        with httpx.Client() as client:
-            response = client.post(
+        async with httpx.AsyncClient() as client:
+            response = await client.post(
                 self.api_url,
                 json=order_data,
                 headers={"Content-Type": "application/json"},
@@ -21,10 +21,10 @@ class OrdersService:
             response.raise_for_status()
             return response.json()
 
-    def get_order_status(self, external_order_id: str) -> Optional[Dict[str, Any]]:
+    async def get_order_status(self, external_order_id: str) -> Optional[Dict[str, Any]]:
         """Get order status from external system"""
-        with httpx.Client() as client:
-            response = client.get(
+        async with httpx.AsyncClient() as client:
+            response = await client.get(
                 f"{self.api_url}/{external_order_id}",
                 timeout=30.0
             )

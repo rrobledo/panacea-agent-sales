@@ -1,5 +1,5 @@
 import anthropic
-from typing import List, Dict, Any, Optional
+from typing import List, Dict, Any, Optional, Callable, Awaitable
 from lib.config import ANTHROPIC_API_KEY
 
 
@@ -13,11 +13,11 @@ class ClaudeService:
 
     def __init__(self):
         log(f"Initializing with API key: {ANTHROPIC_API_KEY[:20] if ANTHROPIC_API_KEY else 'MISSING'}...")
-        self.client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
+        self.client = anthropic.AsyncAnthropic(api_key=ANTHROPIC_API_KEY)
         self.model = "claude-sonnet-4-20250514"
         log(f"Using model: {self.model}")
 
-    def chat(
+    async def chat(
         self,
         messages: List[Dict[str, str]],
         system_prompt: str,
@@ -39,19 +39,19 @@ class ClaudeService:
 
         log("Calling Anthropic API...")
         try:
-            response = self.client.messages.create(**kwargs)
+            response = await self.client.messages.create(**kwargs)
             log(f"API response: stop_reason={response.stop_reason}, content_blocks={len(response.content)}")
             return response
         except Exception as e:
             log(f"API ERROR: {type(e).__name__}: {e}")
             raise
 
-    def chat_with_tools(
+    async def chat_with_tools(
         self,
         messages: List[Dict[str, str]],
         system_prompt: str,
         tools: List[Dict[str, Any]],
-        tool_executor: callable,
+        tool_executor: Callable[..., Awaitable[str]],
         max_iterations: int = 5
     ) -> str:
         """Chat with tool use, handling tool calls automatically"""
@@ -61,7 +61,7 @@ class ClaudeService:
         for iteration in range(max_iterations):
             log(f"Iteration {iteration + 1}/{max_iterations}")
 
-            response = self.chat(
+            response = await self.chat(
                 messages=current_messages,
                 system_prompt=system_prompt,
                 tools=tools
@@ -83,7 +83,7 @@ class ClaudeService:
                     if block.type == "tool_use":
                         log(f"Executing tool: {block.name} with input: {block.input}")
                         try:
-                            result = tool_executor(block.name, block.input)
+                            result = await tool_executor(block.name, block.input)
                             log(f"Tool result: {str(result)[:100]}...")
                         except Exception as e:
                             log(f"Tool execution ERROR: {e}")

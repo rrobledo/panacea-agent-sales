@@ -48,7 +48,7 @@ class WhatsAppService:
 
         return hmac.compare_digest(signature[7:], expected_signature)
 
-    def send_message(self, to: str, text: str) -> dict:
+    async def send_message(self, to: str, text: str) -> dict:
         """Send text message to WhatsApp number"""
         url = f"{self.api_url}/{self.phone_number_id}/messages"
         log(f"send_message to {to}, text length: {len(text)}")
@@ -66,16 +66,16 @@ class WhatsAppService:
             "text": {"body": text}
         }
 
-        with httpx.Client() as client:
+        async with httpx.AsyncClient() as client:
             log("Sending HTTP POST...")
-            response = client.post(url, json=payload, headers=headers)
+            response = await client.post(url, json=payload, headers=headers)
             log(f"Response status: {response.status_code}")
             if response.status_code != 200:
                 log(f"Response body: {response.text}")
             response.raise_for_status()
             return response.json()
 
-    def send_interactive_buttons(
+    async def send_interactive_buttons(
         self,
         to: str,
         body_text: str,
@@ -112,12 +112,12 @@ class WhatsAppService:
             }
         }
 
-        with httpx.Client() as client:
-            response = client.post(url, json=payload, headers=headers)
+        async with httpx.AsyncClient() as client:
+            response = await client.post(url, json=payload, headers=headers)
             response.raise_for_status()
             return response.json()
 
-    def send_interactive_list(
+    async def send_interactive_list(
         self,
         to: str,
         body_text: str,
@@ -146,12 +146,12 @@ class WhatsAppService:
             }
         }
 
-        with httpx.Client() as client:
-            response = client.post(url, json=payload, headers=headers)
+        async with httpx.AsyncClient() as client:
+            response = await client.post(url, json=payload, headers=headers)
             response.raise_for_status()
             return response.json()
 
-    def mark_as_read(self, message_id: str) -> dict:
+    async def mark_as_read(self, message_id: str) -> dict:
         """Mark message as read"""
         url = f"{self.api_url}/{self.phone_number_id}/messages"
         log(f"mark_as_read: {message_id}")
@@ -166,8 +166,8 @@ class WhatsAppService:
             "message_id": message_id
         }
 
-        with httpx.Client() as client:
-            response = client.post(url, json=payload, headers=headers)
+        async with httpx.AsyncClient() as client:
+            response = await client.post(url, json=payload, headers=headers)
             log(f"mark_as_read response: {response.status_code}")
             response.raise_for_status()
             return response.json()

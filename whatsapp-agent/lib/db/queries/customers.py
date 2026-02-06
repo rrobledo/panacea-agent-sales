@@ -9,10 +9,10 @@ class CustomerQueries:
     """Customer database operations"""
 
     @staticmethod
-    def get_by_phone(phone_number: str) -> Optional[Customer]:
+    async def get_by_phone(phone_number: str) -> Optional[Customer]:
         """Get customer by phone number"""
-        result = execute_query(
-            "SELECT * FROM customers WHERE phone_number = %s",
+        result = await execute_query(
+            "SELECT * FROM customers WHERE phone_number = $1",
             (phone_number,),
             fetch_one=True
         )
@@ -21,10 +21,10 @@ class CustomerQueries:
         return None
 
     @staticmethod
-    def get_by_id(customer_id: UUID) -> Optional[Customer]:
+    async def get_by_id(customer_id: UUID) -> Optional[Customer]:
         """Get customer by ID"""
-        result = execute_query(
-            "SELECT * FROM customers WHERE id = %s",
+        result = await execute_query(
+            "SELECT * FROM customers WHERE id = $1",
             (str(customer_id),),
             fetch_one=True
         )
@@ -33,12 +33,12 @@ class CustomerQueries:
         return None
 
     @staticmethod
-    def create(phone_number: str, name: Optional[str] = None) -> Customer:
+    async def create(phone_number: str, name: Optional[str] = None) -> Customer:
         """Create new customer"""
-        result = execute_write(
+        result = await execute_write(
             """
             INSERT INTO customers (phone_number, name, preferences)
-            VALUES (%s, %s, %s)
+            VALUES ($1, $2, $3)
             RETURNING *
             """,
             (phone_number, name, json.dumps({}))
@@ -46,13 +46,13 @@ class CustomerQueries:
         return Customer(**result)
 
     @staticmethod
-    def update_preferences(customer_id: UUID, preferences: Dict[str, Any]) -> Customer:
+    async def update_preferences(customer_id: UUID, preferences: Dict[str, Any]) -> Customer:
         """Update customer preferences"""
-        result = execute_write(
+        result = await execute_write(
             """
             UPDATE customers
-            SET preferences = %s, updated_at = NOW()
-            WHERE id = %s
+            SET preferences = $1, updated_at = NOW()
+            WHERE id = $2
             RETURNING *
             """,
             (json.dumps(preferences), str(customer_id))
@@ -60,13 +60,13 @@ class CustomerQueries:
         return Customer(**result)
 
     @staticmethod
-    def update_name(customer_id: UUID, name: str) -> Customer:
+    async def update_name(customer_id: UUID, name: str) -> Customer:
         """Update customer name"""
-        result = execute_write(
+        result = await execute_write(
             """
             UPDATE customers
-            SET name = %s, updated_at = NOW()
-            WHERE id = %s
+            SET name = $1, updated_at = NOW()
+            WHERE id = $2
             RETURNING *
             """,
             (name, str(customer_id))
@@ -74,9 +74,9 @@ class CustomerQueries:
         return Customer(**result)
 
     @staticmethod
-    def get_or_create(phone_number: str) -> Customer:
+    async def get_or_create(phone_number: str) -> Customer:
         """Get existing customer or create new one"""
-        customer = CustomerQueries.get_by_phone(phone_number)
+        customer = await CustomerQueries.get_by_phone(phone_number)
         if customer:
             return customer
-        return CustomerQueries.create(phone_number)
+        return await CustomerQueries.create(phone_number)

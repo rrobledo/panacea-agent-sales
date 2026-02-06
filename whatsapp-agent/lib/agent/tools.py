@@ -161,16 +161,16 @@ class ToolExecutor:
         self.customer_phone = customer_phone
         self.orders_service = OrdersService()
 
-    def execute(self, tool_name: str, tool_input: Dict[str, Any]) -> str:
+    async def execute(self, tool_name: str, tool_input: Dict[str, Any]) -> str:
         """Execute a tool and return result as string"""
         method = getattr(self, f"_tool_{tool_name}", None)
         if method:
-            return method(tool_input)
+            return await method(tool_input)
         return f"Error: Herramienta '{tool_name}' no encontrada"
 
-    def _tool_get_categories(self, input: Dict) -> str:
+    async def _tool_get_categories(self, input: Dict) -> str:
         """Get all categories"""
-        categories = ProductQueries.get_all_categories()
+        categories = await ProductQueries.get_all_categories()
         if not categories:
             return "No hay categorías disponibles"
 
@@ -182,14 +182,14 @@ class ToolExecutor:
             result += f" (ID: {cat.id})\n"
         return result
 
-    def _tool_get_catalog(self, input: Dict) -> str:
+    async def _tool_get_catalog(self, input: Dict) -> str:
         """Get product catalog"""
         category_id = input.get("category_id")
 
         if category_id:
-            products = ProductQueries.get_products_by_category(UUID(category_id))
+            products = await ProductQueries.get_products_by_category(UUID(category_id))
         else:
-            products = ProductQueries.get_all_products()
+            products = await ProductQueries.get_all_products()
 
         if not products:
             return "No hay productos disponibles"
@@ -209,10 +209,10 @@ class ToolExecutor:
 
         return result
 
-    def _tool_search_products(self, input: Dict) -> str:
+    async def _tool_search_products(self, input: Dict) -> str:
         """Search products"""
         query = input.get("query", "")
-        products = ProductQueries.search_products(query)
+        products = await ProductQueries.search_products(query)
 
         if not products:
             return f"No se encontraron productos con '{query}'"
@@ -226,12 +226,12 @@ class ToolExecutor:
 
         return result
 
-    def _tool_list_recipes(self, input: Dict) -> str:
+    async def _tool_list_recipes(self, input: Dict) -> str:
         """List all available recipes"""
         recipes_data = RecipesData()
         return recipes_data.format_recipe_list()
 
-    def _tool_get_recipe(self, input: Dict) -> str:
+    async def _tool_get_recipe(self, input: Dict) -> str:
         """Get a specific recipe by name or ID"""
         query = input.get("query", "")
         if not query:
@@ -255,7 +255,7 @@ class ToolExecutor:
 
         return f"No se encontró la receta '{query}'. Usa 'list_recipes' para ver todas las recetas disponibles."
 
-    def _tool_search_recipes(self, input: Dict) -> str:
+    async def _tool_search_recipes(self, input: Dict) -> str:
         """Search recipes by name or ingredient"""
         query = input.get("query", "")
         if not query:
@@ -272,7 +272,7 @@ class ToolExecutor:
 
         return recipes_data.format_recipe_list(results)
 
-    def _tool_create_order(self, input: Dict) -> str:
+    async def _tool_create_order(self, input: Dict) -> str:
         """Create a new order"""
         items_input = input.get("items", [])
         if not items_input:
@@ -282,7 +282,7 @@ class ToolExecutor:
         total = Decimal("0")
 
         for item in items_input:
-            product = ProductQueries.get_product_by_id(UUID(item["product_id"]))
+            product = await ProductQueries.get_product_by_id(UUID(item["product_id"]))
             if not product:
                 return f"Error: Producto no encontrado (ID: {item['product_id']})"
 
@@ -299,7 +299,7 @@ class ToolExecutor:
             ))
 
         # Create order in DB
-        order = OrderQueries.create(self.customer_id, order_items, total)
+        order = await OrderQueries.create(self.customer_id, order_items, total)
 
         # Format summary
         result = "📋 RESUMEN DEL PEDIDO\n"
@@ -316,13 +316,13 @@ class ToolExecutor:
 
         return result
 
-    def _tool_confirm_order(self, input: Dict) -> str:
+    async def _tool_confirm_order(self, input: Dict) -> str:
         """Confirm an order"""
         order_id = input.get("order_id")
         if not order_id:
             return "Error: Se requiere el ID del pedido"
 
-        order = OrderQueries.get_by_id(UUID(order_id))
+        order = await OrderQueries.get_by_id(UUID(order_id))
         if not order:
             return "Error: Pedido no encontrado"
 
@@ -330,7 +330,7 @@ class ToolExecutor:
             return f"Error: El pedido ya fue {order.status}"
 
         # Get customer info
-        customer = CustomerQueries.get_by_id(self.customer_id)
+        customer = await CustomerQueries.get_by_id(self.customer_id)
 
         # Send to external API
         try:
@@ -339,40 +339,40 @@ class ToolExecutor:
                 customer_name=customer.name if customer else None,
                 items=[item.model_dump() for item in order.items]
             )
-            response = self.orders_service.create_order(order_data)
+            response = await self.orders_service.create_order(order_data)
             external_id = response.get("id", response.get("numero", str(order.id)))
 
             # Update local order
-            OrderQueries.confirm(order.id, str(external_id))
+            await OrderQueries.confirm(order.id, str(external_id))
 
             return f"✅ ¡Pedido confirmado!\n\nNúmero de pedido: {external_id}\nTotal: ${order.total:.2f}\n\n¡Gracias por tu compra!"
 
         except Exception as e:
             return f"Error al procesar el pedido: {str(e)}. Por favor intenta de nuevo."
 
-    def _tool_cancel_order(self, input: Dict) -> str:
+    async def _tool_cancel_order(self, input: Dict) -> str:
         """Cancel an order"""
         order_id = input.get("order_id")
         if not order_id:
             return "Error: Se requiere el ID del pedido"
 
-        order = OrderQueries.get_by_id(UUID(order_id))
+        order = await OrderQueries.get_by_id(UUID(order_id))
         if not order:
             return "Error: Pedido no encontrado"
 
         if order.status != "pending":
             return f"Error: El pedido ya fue {order.status} y no puede cancelarse"
 
-        OrderQueries.cancel(order.id)
+        await OrderQueries.cancel(order.id)
         return "❌ Pedido cancelado. ¿Hay algo más en lo que pueda ayudarte?"
 
-    def _tool_get_customer_info(self, input: Dict) -> str:
+    async def _tool_get_customer_info(self, input: Dict) -> str:
         """Get customer info"""
-        customer = CustomerQueries.get_by_id(self.customer_id)
+        customer = await CustomerQueries.get_by_id(self.customer_id)
         if not customer:
             return "No se encontró información del cliente"
 
-        orders = OrderQueries.get_customer_orders(self.customer_id, limit=3)
+        orders = await OrderQueries.get_customer_orders(self.customer_id, limit=3)
 
         result = "📊 Información del cliente:\n"
         result += f"- Teléfono: {customer.phone_number}\n"

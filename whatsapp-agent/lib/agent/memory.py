@@ -12,41 +12,44 @@ class ConversationMemory:
         self.customer_id = customer_id
         self._conversation = None
 
-    @property
-    def conversation(self) -> Dict[str, Any]:
+    async def get_conversation(self) -> Dict[str, Any]:
         """Get or create conversation"""
         if self._conversation is None:
-            self._conversation = ConversationQueries.get_or_create(self.customer_id)
+            self._conversation = await ConversationQueries.get_or_create(self.customer_id)
         return self._conversation
 
-    def get_messages(self, limit: int = 10) -> List[Dict[str, str]]:
+    async def get_messages(self, limit: int = 10) -> List[Dict[str, str]]:
         """Get recent messages formatted for Claude"""
-        messages = ConversationQueries.get_recent_messages(self.customer_id, limit)
+        messages = await ConversationQueries.get_recent_messages(self.customer_id, limit)
         return messages
 
-    def add_user_message(self, content: str) -> None:
+    async def add_user_message(self, content: str) -> None:
         """Add user message to conversation"""
-        ConversationQueries.add_message(
-            UUID(str(self.conversation["id"])),
+        conversation = await self.get_conversation()
+        await ConversationQueries.add_message(
+            UUID(str(conversation["id"])),
             "user",
             content
         )
 
-    def add_assistant_message(self, content: str) -> None:
+    async def add_assistant_message(self, content: str) -> None:
         """Add assistant message to conversation"""
-        ConversationQueries.add_message(
-            UUID(str(self.conversation["id"])),
+        conversation = await self.get_conversation()
+        await ConversationQueries.add_message(
+            UUID(str(conversation["id"])),
             "assistant",
             content
         )
 
-    def get_summary(self) -> str:
+    async def get_summary(self) -> str:
         """Get conversation summary if available"""
-        return self.conversation.get("summary", "")
+        conversation = await self.get_conversation()
+        return conversation.get("summary", "")
 
-    def update_summary(self, summary: str) -> None:
+    async def update_summary(self, summary: str) -> None:
         """Update conversation summary"""
-        ConversationQueries.update_summary(
-            UUID(str(self.conversation["id"])),
+        conversation = await self.get_conversation()
+        await ConversationQueries.update_summary(
+            UUID(str(conversation["id"])),
             summary
         )

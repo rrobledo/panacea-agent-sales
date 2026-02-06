@@ -1,7 +1,5 @@
 """Core agent logic"""
 
-from typing import Optional
-from uuid import UUID
 from lib.db.queries import CustomerQueries
 from lib.services.claude import ClaudeService
 from lib.services.whatsapp import WhatsAppService
@@ -15,7 +13,7 @@ def log(message: str):
     print(f"[CORE] {message}")
 
 
-def process_message(phone_number: str, message_text: str, message_id: str) -> str:
+async def process_message(phone_number: str, message_text: str, message_id: str) -> str:
     """
     Process incoming WhatsApp message and return response.
 
@@ -39,14 +37,14 @@ def process_message(phone_number: str, message_text: str, message_id: str) -> st
     # Mark message as read
     try:
         log("Marking message as read...")
-        whatsapp_service.mark_as_read(message_id)
+        await whatsapp_service.mark_as_read(message_id)
         log("Message marked as read")
     except Exception as e:
         log(f"Failed to mark as read (non-critical): {e}")
 
     # Get or create customer
     log("Getting/creating customer...")
-    customer = CustomerQueries.get_or_create(phone_number)
+    customer = await CustomerQueries.get_or_create(phone_number)
     log(f"Customer ID: {customer.id}, Name: {customer.name}")
 
     # Initialize memory
@@ -55,11 +53,11 @@ def process_message(phone_number: str, message_text: str, message_id: str) -> st
 
     # Add user message to history
     log("Adding user message to history...")
-    memory.add_user_message(message_text)
+    await memory.add_user_message(message_text)
 
     # Get conversation history
     log("Getting conversation history...")
-    messages = memory.get_messages(limit=10)
+    messages = await memory.get_messages(limit=10)
     log(f"History messages count: {len(messages)}")
 
     # Build personalized prompt
@@ -75,7 +73,7 @@ def process_message(phone_number: str, message_text: str, message_id: str) -> st
 
     # Get response from Claude
     log("Calling Claude API...")
-    response = claude_service.chat_with_tools(
+    response = await claude_service.chat_with_tools(
         messages=messages,
         system_prompt=system_prompt,
         tools=TOOLS,
@@ -85,13 +83,13 @@ def process_message(phone_number: str, message_text: str, message_id: str) -> st
 
     # Save assistant response
     log("Saving assistant response to memory...")
-    memory.add_assistant_message(response)
+    await memory.add_assistant_message(response)
 
     log("=== Message processing complete ===")
     return response
 
 
-def send_response(phone_number: str, response_text: str) -> bool:
+async def send_response(phone_number: str, response_text: str) -> bool:
     """
     Send response back via WhatsApp.
 
@@ -110,9 +108,9 @@ def send_response(phone_number: str, response_text: str) -> bool:
             # Split into multiple messages
             chunks = [response_text[i:i+4000] for i in range(0, len(response_text), 4000)]
             for chunk in chunks:
-                whatsapp_service.send_message(phone_number, chunk)
+                await whatsapp_service.send_message(phone_number, chunk)
         else:
-            whatsapp_service.send_message(phone_number, response_text)
+            await whatsapp_service.send_message(phone_number, response_text)
         return True
     except Exception as e:
         print(f"Error sending message: {e}")
