@@ -103,40 +103,25 @@ class RecipesData:
         if recipe.get("rendimiento"):
             result += f"📊 Rendimiento: {recipe['rendimiento']}\n\n"
 
-        # Ingredients
+        # Ingredients — names only, no quantities (confidential)
         result += "📝 INGREDIENTES:\n"
         ingredientes = recipe.get("ingredientes", [])
         for ing in ingredientes:
-            nombre = ing.get("nombre", "")
-            cantidad = ing.get("cantidad", "")
-            unidad = ing.get("unidad", "")
-            if cantidad:
-                result += f"  • {nombre}: {cantidad} {unidad}\n"
-            else:
-                result += f"  • {nombre}: {unidad}\n"
+            result += f"  • {ing.get('nombre', '')}\n"
 
-        # Check for additional ingredient lists
-        if recipe.get("ingredientes_vainilla"):
-            result += "\n  Ingredientes Vainilla:\n"
-            for ing in recipe["ingredientes_vainilla"]:
-                result += f"    • {ing.get('nombre', '')}: {ing.get('cantidad', '')} {ing.get('unidad', '')}\n"
+        # Additional ingredient lists — names only
+        for key, label in [
+            ("ingredientes_vainilla", "Ingredientes Vainilla"),
+            ("ingredientes_chocolate", "Ingredientes Chocolate"),
+            ("ingredientes_empaste", "Ingredientes Empaste"),
+            ("ingredientes_pastelera", "Ingredientes Pastelera"),
+        ]:
+            if recipe.get(key):
+                result += f"\n  {label}:\n"
+                for ing in recipe[key]:
+                    result += f"    • {ing.get('nombre', '')}\n"
 
-        if recipe.get("ingredientes_chocolate"):
-            result += "\n  Ingredientes Chocolate:\n"
-            for ing in recipe["ingredientes_chocolate"]:
-                result += f"    • {ing.get('nombre', '')}: {ing.get('cantidad', '')} {ing.get('unidad', '')}\n"
-
-        if recipe.get("ingredientes_empaste"):
-            result += "\n  Ingredientes Empaste:\n"
-            for ing in recipe["ingredientes_empaste"]:
-                result += f"    • {ing.get('nombre', '')}: {ing.get('cantidad', '')} {ing.get('unidad', '')}\n"
-
-        if recipe.get("ingredientes_pastelera"):
-            result += "\n  Ingredientes Pastelera:\n"
-            for ing in recipe["ingredientes_pastelera"]:
-                result += f"    • {ing.get('nombre', '')}: {ing.get('cantidad', '')} {ing.get('unidad', '')}\n"
-
-        # Relleno (filling)
+        # Relleno — names only
         if recipe.get("relleno"):
             result += "\n🥧 RELLENO:\n"
             relleno = recipe["relleno"]
@@ -153,20 +138,7 @@ class RecipesData:
                     for item in relleno["condimentos"]:
                         result += f"    • {item}\n"
 
-        # Procedure
-        result += f"\n👨‍🍳 PROCEDIMIENTO:\n{recipe.get('procedimiento', 'Sin procedimiento')}\n"
-
-        # Cooking details
-        coccion = recipe.get("coccion", {})
-        if coccion:
-            result += "\n🔥 COCCIÓN:\n"
-            for key, value in coccion.items():
-                if isinstance(value, dict):
-                    result += f"  {key}:\n"
-                    for k, v in value.items():
-                        result += f"    • {k}: {v}\n"
-                else:
-                    result += f"  • {key}: {value}\n"
+        result += "\n⚠️ Las cantidades y el procedimiento son parte de nuestras fórmulas exclusivas.\n"
 
         # Variants
         if recipe.get("variantes"):
