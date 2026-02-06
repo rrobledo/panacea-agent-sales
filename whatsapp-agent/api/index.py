@@ -1,4 +1,4 @@
-"""FastAPI application for WhatsApp webhook — deployed via Mangum on Vercel."""
+"""FastAPI application for WhatsApp webhook — deployed on Vercel."""
 
 import sys
 import os
@@ -9,7 +9,6 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from fastapi import FastAPI, BackgroundTasks, Query, Request
 from fastapi.responses import PlainTextResponse, JSONResponse
-from mangum import Mangum
 
 from lib.services.whatsapp import WhatsAppService
 from lib.schemas.whatsapp import WhatsAppWebhookPayload
@@ -119,8 +118,3 @@ async def receive_webhook(request: Request, background_tasks: BackgroundTasks):
         # Still return 200 to prevent Meta from retrying
         return JSONResponse(content={"status": "error", "message": str(e)})
 
-
-# ---------------------------------------------------------------------------
-# Mangum handler for Vercel
-# ---------------------------------------------------------------------------
-handler = Mangum(app, lifespan="off")
