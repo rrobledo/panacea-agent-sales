@@ -12,6 +12,3 @@ WHATSAPP_API_URL: str = "https://graph.facebook.com/v18.0"
 
 # Database
 POSTGRES_URL: str = os.environ.get("POSTGRES_URL", "")
-
-# External API
-ORDERS_API_URL: str = os.environ.get("ORDERS_API_URL", "https://panacea-one.vercel.app/costos/remitos")

@@ -1,6 +1,6 @@
 """Core agent logic"""
 
-from lib.db.queries import CustomerQueries
+from uuid import uuid5, NAMESPACE_URL
 from lib.services.claude import ClaudeService
 from lib.services.whatsapp import WhatsAppService
 from lib.agent.prompts import get_personalized_prompt
@@ -11,6 +11,11 @@ from lib.agent.memory import ConversationMemory
 def log(message: str):
     """Print log with prefix"""
     print(f"[CORE] {message}")
+
+
+def _phone_to_uuid(phone_number: str):
+    """Derive a deterministic UUID from a phone number."""
+    return uuid5(NAMESPACE_URL, f"tel:{phone_number}")
 
 
 async def process_message(phone_number: str, message_text: str, message_id: str) -> str:
@@ -42,14 +47,13 @@ async def process_message(phone_number: str, message_text: str, message_id: str)
     except Exception as e:
         log(f"Failed to mark as read (non-critical): {e}")
 
-    # Get or create customer
-    log("Getting/creating customer...")
-    customer = await CustomerQueries.get_or_create(phone_number)
-    log(f"Customer ID: {customer.id}, Name: {customer.name}")
+    # Derive a stable UUID from the phone number for conversation storage
+    customer_id = _phone_to_uuid(phone_number)
+    log(f"Derived customer UUID: {customer_id}")
 
     # Initialize memory
     log("Initializing conversation memory...")
-    memory = ConversationMemory(customer.id)
+    memory = ConversationMemory(customer_id)
 
     # Add user message to history
     log("Adding user message to history...")
@@ -60,16 +64,13 @@ async def process_message(phone_number: str, message_text: str, message_id: str)
     messages = await memory.get_messages(limit=10)
     log(f"History messages count: {len(messages)}")
 
-    # Build personalized prompt
-    log("Building personalized prompt...")
-    system_prompt = get_personalized_prompt(
-        customer_name=customer.name,
-        preferences=customer.preferences
-    )
+    # Build prompt
+    log("Building system prompt...")
+    system_prompt = get_personalized_prompt()
 
     # Initialize tool executor
     log("Initializing tool executor...")
-    tool_executor = ToolExecutor(customer.id, phone_number)
+    tool_executor = ToolExecutor()
 
     # Get response from Claude
     log("Calling Claude API...")
