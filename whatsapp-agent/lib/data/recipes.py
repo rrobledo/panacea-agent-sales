@@ -20,9 +20,9 @@ class RecipesData:
 
     def _load_recipes(self):
         """Load recipes from JSON file"""
-        # Path relative to project root
+        # Path relative to whatsapp-agent/ root
         json_path = os.path.join(
-            os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__)))),
+            os.path.dirname(os.path.dirname(os.path.dirname(__file__))),
             "data",
             "recetas2025.json"
         )
