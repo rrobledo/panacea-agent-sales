@@ -1,6 +1,21 @@
 from typing import Optional, List, Dict, Any
 from uuid import UUID
+import json
 from lib.db.connection import execute_query, execute_write
+
+
+def _ensure_list(messages) -> list:
+    """Safely parse messages that may be a str (legacy double-encoded) or list."""
+    if isinstance(messages, list):
+        return messages
+    if isinstance(messages, str):
+        try:
+            parsed = json.loads(messages)
+            if isinstance(parsed, list):
+                return parsed
+        except (json.JSONDecodeError, TypeError):
+            pass
+    return []
 
 
 class ConversationQueries:
@@ -44,7 +59,7 @@ class ConversationQueries:
             fetch_one=True
         )
 
-        messages = current["messages"] if current else []
+        messages = _ensure_list(current["messages"]) if current else []
         messages.append({"role": role, "content": content})
 
         # Keep only last 20 messages to manage context window
@@ -69,7 +84,7 @@ class ConversationQueries:
         if not conversation:
             return []
 
-        messages = conversation.get("messages", [])
+        messages = _ensure_list(conversation.get("messages", []))
         return messages[-limit:] if messages else []
 
     @staticmethod
