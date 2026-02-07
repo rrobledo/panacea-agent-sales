@@ -1,6 +1,5 @@
 from typing import Optional, List, Dict, Any
 from uuid import UUID
-import json
 from lib.db.connection import execute_query, execute_write
 
 
@@ -31,7 +30,7 @@ class ConversationQueries:
             VALUES ($1, $2, NULL)
             RETURNING *
             """,
-            (str(customer_id), json.dumps([]))
+            (str(customer_id), [])
         )
         return dict(result)
 
@@ -59,7 +58,7 @@ class ConversationQueries:
             WHERE id = $2
             RETURNING *
             """,
-            (json.dumps(messages), str(conversation_id))
+            (messages, str(conversation_id))
         )
         return dict(result)
 
